@@ -4,168 +4,69 @@ const https = require('https');
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_REPO = process.env.GITHUB_REPO; // 格式: owner/repo
 const GITHUB_BRANCH = process.env.GITHUB_BRANCH || 'main';
-const VENDOR_FILE = process.env.VENDOR_FILE || 'data/vendors.json';
-const BOOTH_FILE = process.env.BOOTH_FILE || 'data/booths.json';
 const SCHEDULE_FILE = process.env.SCHEDULE_FILE || 'data/schedule.json';
 
 exports.handler = async (event, context) => {
-    // 只允許 POST 請求
-    if (event.httpMethod !== 'POST') {
-        return {
-            statusCode: 405,
-            body: JSON.stringify({ error: '只允許 POST 請求' })
-        };
-    }
-
     try {
-        // 解析請求資料
-        const { vendor_id, booth_location, date } = JSON.parse(event.body);
-
-        // 1️⃣ 驗證欄位
-        if (!vendor_id || !booth_location || !date) {
-            return {
-                statusCode: 400,
-                body: JSON.stringify({ error: '請填寫所有必填欄位' })
-            };
-        }
-
-        // 驗證日期格式
-        if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
-            return {
-                statusCode: 400,
-                body: JSON.stringify({ error: '日期格式不正確' })
-            };
-        }
-
-        // 2️⃣ 從 GitHub 載入資料檔案
-        const [vendorsData, boothsData, scheduleData] = await Promise.all([
-            getFileFromGitHub(VENDOR_FILE),
-            getFileFromGitHub(BOOTH_FILE),
-            getFileFromGitHub(SCHEDULE_FILE)
-        ]);
-
-        const vendors = JSON.parse(vendorsData.content);
-        let booths = JSON.parse(boothsData.content);
+        // 從 GitHub 載入資料檔案
+        const scheduleData = await getFileFromGitHub(SCHEDULE_FILE);
         let schedule = JSON.parse(scheduleData.content);
 
-        // 🗑️ 自動清理一個月前的舊資料
+        const originalCount = schedule.length;
+
+        // 計算一個月前的日期
         const oneMonthAgo = new Date();
         oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
-        
-        const originalCount = schedule.length;
+
+        // 只保留一個月內的資料
         schedule = schedule.filter(record => {
             const recordDate = new Date(record.date);
             return recordDate >= oneMonthAgo;
         });
-        const cleanedCount = originalCount - schedule.length;
 
-        // 3️⃣ 找出攤主名稱
-        const vendor = vendors.find(v => v.vendor_id === vendor_id);
-        if (!vendor) {
+        const newCount = schedule.length;
+        const deletedCount = originalCount - newCount;
+
+        // 如果有資料被刪除，則更新檔案
+        if (deletedCount > 0) {
+            const filesToUpdate = [
+                {
+                    path: SCHEDULE_FILE,
+                    content: JSON.stringify(schedule, null, 2),
+                    sha: scheduleData.sha
+                }
+            ];
+
+            await commitToGitHub(
+                filesToUpdate,
+                `清理舊資料: 刪除 ${deletedCount} 筆超過一個月的紀錄`
+            );
+
             return {
-                statusCode: 400,
-                body: JSON.stringify({ error: '找不到該攤主' })
+                statusCode: 200,
+                body: JSON.stringify({
+                    message: `成功清理 ${deletedCount} 筆舊資料`,
+                    deleted: deletedCount,
+                    remaining: newCount
+                })
             };
-        }
-        const vendor_name = vendor.vendor_name;
-        const vendor_category = vendor.category || ''; // 攤主類別
-
-        // 4️⃣ 檢查並處理攤位地點
-        let booth = booths.find(b => b.booth_location === booth_location);
-        let isNewBooth = false;
-
-        if (!booth) {
-            // 新增新地點
-            booth = {
-                booth_location: booth_location,
-                booth_name: booth_location
-            };
-            booths.push(booth);
-            isNewBooth = true;
-        }
-        const booth_name = booth.booth_name;
-
-        // 5️⃣ 檢查重複
-        // 檢查同攤主 + 日期
-        const duplicateVendor = schedule.find(
-            s => s.vendor_id === vendor_id && s.date === date
-        );
-        if (duplicateVendor) {
+        } else {
             return {
-                statusCode: 409,
-                body: JSON.stringify({ 
-                    error: `攤主「${vendor_name}」已在 ${date} 登記過了（地點：${duplicateVendor.booth_location}）` 
+                statusCode: 200,
+                body: JSON.stringify({
+                    message: '無需清理，所有資料都在一個月內',
+                    deleted: 0,
+                    remaining: newCount
                 })
             };
         }
-
-        // 檢查同地點 + 日期
-        const duplicateBooth = schedule.find(
-            s => s.booth_location === booth_location && s.date === date
-        );
-        if (duplicateBooth) {
-            return {
-                statusCode: 409,
-                body: JSON.stringify({ 
-                    error: `攤位「${booth_location}」在 ${date} 已被登記（攤主：${duplicateBooth.vendor_name}）` 
-                })
-            };
-        }
-
-        // 6️⃣ 新增紀錄
-        const newRecord = {
-            vendor_id,
-            vendor_name,
-            vendor_category,
-            booth_location,
-            booth_name,
-            date,
-            submitted_at: new Date().toISOString()
-        };
-        schedule.push(newRecord);
-
-        // 7️⃣ Commit 至 GitHub
-        const filesToUpdate = [
-            {
-                path: SCHEDULE_FILE,
-                content: JSON.stringify(schedule, null, 2),
-                sha: scheduleData.sha
-            }
-        ];
-
-        // 如果有新攤位，也要更新 booths.json
-        if (isNewBooth) {
-            filesToUpdate.push({
-                path: BOOTH_FILE,
-                content: JSON.stringify(booths, null, 2),
-                sha: boothsData.sha
-            });
-        }
-
-        // 執行 commit
-        let commitMessage = `新增登記: ${vendor_name} - ${booth_location} (${date})`;
-        if (cleanedCount > 0) {
-            commitMessage += ` [自動清理 ${cleanedCount} 筆舊資料]`;
-        }
-        await commitToGitHub(filesToUpdate, commitMessage);
-
-        // 8️⃣ 回傳成功
-        return {
-            statusCode: 200,
-            body: JSON.stringify({
-                message: `✅ 登記成功！${vendor_name} - ${booth_location} (${date})`,
-                data: newRecord,
-                newBoothAdded: isNewBooth,
-                cleanedCount: cleanedCount
-            })
-        };
 
     } catch (error) {
-        console.error('處理錯誤:', error);
+        console.error('清理錯誤:', error);
         return {
             statusCode: 500,
             body: JSON.stringify({ 
-                error: '伺服器錯誤',
+                error: '清理失敗',
                 details: error.message 
             })
         };
@@ -196,7 +97,6 @@ async function getFileFromGitHub(filePath) {
             res.on('end', () => {
                 if (res.statusCode === 200) {
                     const fileData = JSON.parse(data);
-                    // Base64 解碼
                     const content = Buffer.from(fileData.content, 'base64').toString('utf-8');
                     resolve({
                         content,
@@ -218,13 +118,9 @@ async function getFileFromGitHub(filePath) {
 
 // Commit 到 GitHub
 async function commitToGitHub(files, message) {
-    // 1. 取得最新的 commit SHA
     const latestCommitSha = await getLatestCommitSha();
-
-    // 2. 取得該 commit 的 tree SHA
     const baseTreeSha = await getTreeSha(latestCommitSha);
 
-    // 3. 建立新的 tree
     const treeItems = files.map(file => ({
         path: file.path,
         mode: '100644',
@@ -233,11 +129,7 @@ async function commitToGitHub(files, message) {
     }));
 
     const newTreeSha = await createTree(treeItems, baseTreeSha);
-
-    // 4. 建立新的 commit
     const newCommitSha = await createCommit(message, newTreeSha, latestCommitSha);
-
-    // 5. 更新 branch reference
     await updateReference(newCommitSha);
 
     return newCommitSha;

@@ -276,6 +276,17 @@
             try {
                 const response = await fetch('data/schedule.json');
                 allSchedules = await response.json();
+                
+                // 計算一個月前的日期
+                const oneMonthAgo = new Date();
+                oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+                
+                // 只保留一個月內的資料
+                allSchedules = allSchedules.filter(schedule => {
+                    const scheduleDate = new Date(schedule.date);
+                    return scheduleDate >= oneMonthAgo;
+                });
+                
                 filteredSchedules = [...allSchedules];
                 
                 // 按日期降序排序（最新的在前）
