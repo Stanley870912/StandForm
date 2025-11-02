@@ -128,7 +128,7 @@
                                 <th style="width: 20%;">攤主</th>
                                 <th style="width: 25%;">攤位地點</th>
                                 <th style="width: 15%;">日期</th>
-                                <th style="width: 20%;">登記時間</th>
+                                <!-- <th style="width: 20%;">登記時間</th> -->
                                 <th style="width: 15%;">操作</th>
                             </tr>
                         </thead>
@@ -385,10 +385,10 @@
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${index + 1}</td>
-                    <td><strong>${schedule.vendor_name}</strong><br><small class="text-muted">${schedule.vendor_id}</small></td>
-                    <td><strong>${schedule.booth_location}</strong><br><small class="text-muted">${schedule.booth_name}</small></td>
+                    <td><strong>${schedule.vendor_name}</strong></td>
+                    <td><strong>${schedule.booth_location}</strong></td>
                     <td>${formatDate(schedule.date)}</td>
-                    <td>${formatDateTime(schedule.submitted_at)}</td>
+                    // <td>${formatDateTime(schedule.submitted_at)}</td>
                     <td class="action-buttons">
                         <button class="btn btn-sm btn-warning" onclick="openEditModal(${index})">
                             ✏️ 改地點
