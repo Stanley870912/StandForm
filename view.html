@@ -282,8 +282,8 @@
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${index + 1}</td>
-                    <td><strong>${schedule.vendor_name}</strong><br><small class="text-muted">${schedule.vendor_id}</small></td>
-                    <td><strong>${schedule.booth_location}</strong><br><small class="text-muted">${schedule.booth_name}</small></td>
+                    <td><strong>${schedule.vendor_name}</strong></td>
+                    <td><strong>${schedule.booth_location}</strong></td>
                     <td>${formatDate(schedule.date)}</td>
                     <td>${formatDateTime(schedule.submitted_at)}</td>
                 `;
