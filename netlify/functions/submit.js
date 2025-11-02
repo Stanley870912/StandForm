@@ -37,6 +37,33 @@ exports.handler = async (event, context) => {
             };
         }
 
+        // 驗證攤位地點格式（地區+市場名）
+        // 定義合法的地區列表
+        const validRegions = [
+            '基隆', '台北', '新北', '桃園', '新竹', '苗栗', 
+            '台中', '彰化', '南投', '雲林', '嘉義', '台南', 
+            '高雄', '屏東', '宜蘭', '花蓮', '台東', '澎湖', 
+            '金門', '連江', '臺北', '臺中', '臺南', '臺東'
+        ];
+        
+        // 檢查是否以任何一個地區開頭，後面必須有市場名稱
+        const hasValidFormat = validRegions.some(region => {
+            if (booth_location.startsWith(region)) {
+                // 確保地區後面還有其他字（市場名）
+                return booth_location.length > region.length;
+            }
+            return false;
+        });
+        
+        if (!hasValidFormat) {
+            return {
+                statusCode: 400,
+                body: JSON.stringify({ 
+                    error: '地點格式錯誤：必須是「地區+市場名」（例如：台北南門市場、高雄三鳳中街）' 
+                })
+            };
+        }
+
         // 2️⃣ 從 GitHub 載入資料檔案
         const [vendorsData, boothsData, scheduleData] = await Promise.all([
             getFileFromGitHub(VENDOR_FILE),
