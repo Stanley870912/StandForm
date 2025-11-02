@@ -437,7 +437,7 @@
             // 填入當前資料
             document.getElementById('editVendorName').textContent = editingSchedule.vendor_name;
             document.getElementById('editDate').textContent = formatDate(editingSchedule.date);
-            document.getElementById('editCurrentLocation').textContent = `${editingSchedule.booth_location} - ${editingSchedule.booth_name}`;
+            document.getElementById('editCurrentLocation').textContent = `${editingSchedule.booth_name}`;
             document.getElementById('editNewLocation').value = editingSchedule.booth_location;
             document.getElementById('editNewLocationHint').style.display = 'none';
             document.getElementById('editMessageContainer').innerHTML = '';
