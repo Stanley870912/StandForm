@@ -83,13 +83,21 @@
                 <div class="filter-section">
                     <h5 class="mb-3">🔍 篩選條件</h5>
                     <div class="row g-3">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <label for="filterVendor" class="form-label">攤主</label>
                             <select class="form-select" id="filterVendor">
                                 <option value="">全部攤主</option>
                             </select>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
+                            <label for="filterCategory" class="form-label">類別</label>
+                            <select class="form-select" id="filterCategory">
+                                <option value="">全部類別</option>
+                                <option value="糖果">糖果</option>
+                                <option value="餅乾">餅乾</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
                             <label for="filterLocation" class="form-label">地點</label>
                             <input 
                                 type="text" 
@@ -98,7 +106,7 @@
                                 placeholder="輸入地點關鍵字"
                             >
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <label for="filterDate" class="form-label">日期</label>
                             <input 
                                 type="date" 
@@ -125,9 +133,10 @@
                         <thead>
                             <tr>
                                 <th style="width: 5%;">#</th>
-                                <th style="width: 20%;">攤主</th>
-                                <th style="width: 25%;">攤位地點</th>
-                                <th style="width: 15%;">日期</th>
+                                <th style="width: 18%;">攤主</th>
+                                <th style="width: 12%;">類別</th>
+                                <th style="width: 22%;">攤位地點</th>
+                                <th style="width: 13%;">日期</th>
                                 <!-- <th style="width: 20%;">登記時間</th> -->
                                 <th style="width: 15%;">操作</th>
                             </tr>
@@ -315,12 +324,16 @@
         // 套用篩選
         function applyFilters() {
             const vendorId = document.getElementById('filterVendor').value;
+            const category = document.getElementById('filterCategory').value;
             const location = document.getElementById('filterLocation').value.trim().toLowerCase();
             const date = document.getElementById('filterDate').value;
 
             filteredSchedules = allSchedules.filter(schedule => {
                 // 攤主篩選
                 if (vendorId && schedule.vendor_id !== vendorId) return false;
+                
+                // 類別篩選
+                if (category && schedule.vendor_category !== category) return false;
                 
                 // 地點篩選（模糊搜尋）
                 if (location && 
@@ -348,6 +361,7 @@
         // 清除篩選
         function clearFilters() {
             document.getElementById('filterVendor').value = '';
+            document.getElementById('filterCategory').value = '';
             document.getElementById('filterLocation').value = '';
             document.getElementById('filterDate').value = '';
             
@@ -383,10 +397,15 @@
 
             filteredSchedules.forEach((schedule, index) => {
                 const row = document.createElement('tr');
+                const categoryBadge = schedule.vendor_category ? 
+                    `<span class="badge ${schedule.vendor_category === '糖果' ? 'bg-info' : 'bg-warning'}">${schedule.vendor_category}</span>` : 
+                    '<span class="badge bg-secondary">未分類</span>';
+                
                 row.innerHTML = `
                     <td>${index + 1}</td>
-                    <td><strong>${schedule.vendor_name}</strong></td>
-                    <td><strong>${schedule.booth_location}</strong></td>
+                    <td><strong>${schedule.vendor_name}</strong><br><small class="text-muted">${schedule.vendor_id}</small></td>
+                    <td>${categoryBadge}</td>
+                    <td><strong>${schedule.booth_location}</strong><br><small class="text-muted">${schedule.booth_name}</small></td>
                     <td>${formatDate(schedule.date)}</td>
                     <!--<td>${formatDateTime(schedule.submitted_at)}</td>-->
                     <td class="action-buttons">

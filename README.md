@@ -5,12 +5,13 @@
 ## ✨ 功能特色
 
 - ✅ **攤主管理**：從固定清單選擇攤主
+- 🏷️ **類別分類**：支援糖果、餅乾兩種攤位類別篩選
 - 🔍 **模糊搜尋**：支援攤位地點自動完成與模糊搜尋
 - ➕ **自動新增**：輸入新地點時自動加入系統
 - 🚫 **防重複**：同攤主+日期 或 同地點+日期 不可重複登記
 - ✏️ **修改地點**：可修改已登記的攤位地點
 - 💾 **GitHub 同步**：每次登記或修改自動 commit 至 GitHub
-- 📊 **多條件篩選**：可依攤主、地點、日期篩選檢視紀錄
+- 📊 **多條件篩選**：可依攤主、類別、地點、日期篩選檢視紀錄
 - 📱 **響應式設計**：支援各種螢幕尺寸
 
 ## 📁 專案結構
@@ -113,7 +114,8 @@ netlify deploy --prod
 
 1. 開啟 `view.html`
 2. 使用篩選功能：
-   - **攤主篩選**：下拉選單選擇
+   - **攤主篩選**：下拉選單選擇特定攤主
+   - **類別篩選**：選擇「糖果」或「餅乾」
    - **地點篩選**：輸入關鍵字模糊搜尋
    - **日期篩選**：選擇特定日期
 3. 點擊「套用篩選」查看結果
@@ -137,12 +139,15 @@ netlify deploy --prod
 
 ```json
 [
-  { "vendor_id": "V001", "vendor_name": "王小明甜點屋" },
-  { "vendor_id": "V002", "vendor_name": "李小華咖啡站" },
-  { "vendor_id": "V003", "vendor_name": "陳阿姨水果攤" },
-  { "vendor_id": "V004", "vendor_name": "新攤主名稱" }
+  { "vendor_id": "北一", "vendor_name": "北一", "category": "糖果" },
+  { "vendor_id": "南一", "vendor_name": "南一", "category": "餅乾" },
+  { "vendor_id": "V004", "vendor_name": "新攤主名稱", "category": "糖果" }
 ]
 ```
+
+**類別選項**：
+- `糖果`
+- `餅乾`
 
 ### 預設攤位地點
 
@@ -178,12 +183,23 @@ netlify deploy --prod
 
 ## 📊 資料格式
 
+### Vendor（攤主）
+
+```json
+{
+  "vendor_id": "北一",
+  "vendor_name": "北一",
+  "category": "糖果"
+}
+```
+
 ### Schedule Record（登記紀錄）
 
 ```json
 {
-  "vendor_id": "V001",
-  "vendor_name": "王小明甜點屋",
+  "vendor_id": "北一",
+  "vendor_name": "北一",
+  "vendor_category": "糖果",
   "booth_location": "A1",
   "booth_name": "中庭攤位A1",
   "date": "2025-11-02",

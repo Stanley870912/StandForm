@@ -57,6 +57,7 @@ exports.handler = async (event, context) => {
             };
         }
         const vendor_name = vendor.vendor_name;
+        const vendor_category = vendor.category || ''; // 攤主類別
 
         // 4️⃣ 檢查並處理攤位地點
         let booth = booths.find(b => b.booth_location === booth_location);
@@ -104,6 +105,7 @@ exports.handler = async (event, context) => {
         const newRecord = {
             vendor_id,
             vendor_name,
+            vendor_category,
             booth_location,
             booth_name,
             date,
