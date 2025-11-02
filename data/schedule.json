@@ -14,5 +14,13 @@
     "booth_name": "走廊攤位B2",
     "date": "2025-11-03",
     "submitted_at": "2025-11-02T05:12:53.612Z"
+  },
+  {
+    "vendor_id": "V001",
+    "vendor_name": "王小明甜點屋",
+    "booth_location": "彰化三民市場",
+    "booth_name": "彰化三民市場",
+    "date": "2025-11-03",
+    "submitted_at": "2025-11-02T05:14:51.395Z"
   }
 ]
