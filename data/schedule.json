@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "vendor_id": "V001",
+    "vendor_name": "王小明甜點屋",
+    "booth_location": "A1",
+    "booth_name": "中庭攤位A1",
+    "date": "2025-11-02",
+    "submitted_at": "2025-11-02T05:12:02.616Z"
+  }
+]
