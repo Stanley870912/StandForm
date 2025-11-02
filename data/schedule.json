@@ -22,5 +22,13 @@
     "booth_name": "台中大智市場",
     "date": "2025-11-02",
     "submitted_at": "2025-11-02T05:36:59.123Z"
+  },
+  {
+    "vendor_id": "北一",
+    "vendor_name": "北一",
+    "booth_location": "彰化三民市場",
+    "booth_name": "彰化三民市場",
+    "date": "2025-11-03",
+    "submitted_at": "2025-11-02T06:11:30.635Z"
   }
 ]
