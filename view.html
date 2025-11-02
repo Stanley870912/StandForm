@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>檢視登記紀錄</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        .container {
+            max-width: 1000px;
+        }
+        .card {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: none;
+            border-radius: 15px;
+        }
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px 15px 0 0 !important;
+            padding: 20px;
+        }
+        .filter-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .table-responsive {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .table {
+            margin-bottom: 0;
+        }
+        .table thead {
+            background-color: #667eea;
+            color: white;
+        }
+        .no-data {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+        }
+        .no-data i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+        .badge {
+            font-size: 0.875rem;
+        }
+        .btn-outline-secondary {
+            border-color: #667eea;
+            color: #667eea;
+        }
+        .btn-outline-secondary:hover {
+            background-color: #667eea;
+            border-color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header text-center">
+                <h2 class="mb-0">📋 攤位登記紀錄</h2>
+            </div>
+            <div class="card-body p-4">
+                <!-- 篩選區域 -->
+                <div class="filter-section">
+                    <h5 class="mb-3">🔍 篩選條件</h5>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label for="filterVendor" class="form-label">攤主</label>
+                            <select class="form-select" id="filterVendor">
+                                <option value="">全部攤主</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="filterLocation" class="form-label">地點</label>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                id="filterLocation" 
+                                placeholder="輸入地點關鍵字"
+                            >
+                        </div>
+                        <div class="col-md-4">
+                            <label for="filterDate" class="form-label">日期</label>
+                            <input 
+                                type="date" 
+                                class="form-control" 
+                                id="filterDate"
+                            >
+                        </div>
+                    </div>
+                    <div class="mt-3 text-end">
+                        <button class="btn btn-secondary" id="clearFilters">清除篩選</button>
+                        <button class="btn btn-primary" id="applyFilters">套用篩選</button>
+                    </div>
+                </div>
+
+                <!-- 統計資訊 -->
+                <div class="mb-3">
+                    <span class="badge bg-primary">總筆數：<span id="totalCount">0</span></span>
+                    <span class="badge bg-success ms-2">顯示筆數：<span id="displayCount">0</span></span>
+                </div>
+
+                <!-- 表格 -->
+                <div class="table-responsive">
+                    <table class="table table-hover" id="scheduleTable">
+                        <thead>
+                            <tr>
+                                <th style="width: 5%;">#</th>
+                                <th style="width: 25%;">攤主</th>
+                                <th style="width: 30%;">攤位地點</th>
+                                <th style="width: 20%;">日期</th>
+                                <th style="width: 20%;">登記時間</th>
+                            </tr>
+                        </thead>
+                        <tbody id="scheduleBody">
+                            <!-- 資料將由 JavaScript 動態載入 -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 無資料提示 -->
+                <div id="noDataMessage" class="no-data" style="display: none;">
+                    <div style="font-size: 4rem; margin-bottom: 20px; opacity: 0.3;">📭</div>
+                    <h5>查無符合條件的紀錄</h5>
+                    <p class="text-muted">請調整篩選條件或新增登記紀錄</p>
+                </div>
+
+                <!-- 返回按鈕 -->
+                <div class="mt-4">
+                    <a href="index.html" class="btn btn-outline-secondary">← 返回登記頁面</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 全域變數
+        let allSchedules = [];
+        let filteredSchedules = [];
+        let vendors = [];
+
+        // 頁面載入時初始化
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadVendors();
+            await loadSchedules();
+            setupEventListeners();
+        });
+
+        // 載入攤主清單
+        async function loadVendors() {
+            try {
+                const response = await fetch('data/vendors.json');
+                vendors = await response.json();
+                
+                const filterVendor = document.getElementById('filterVendor');
+                vendors.forEach(vendor => {
+                    const option = document.createElement('option');
+                    option.value = vendor.vendor_id;
+                    option.textContent = vendor.vendor_name;
+                    filterVendor.appendChild(option);
+                });
+            } catch (error) {
+                console.error('載入攤主清單失敗:', error);
+            }
+        }
+
+        // 載入登記紀錄
+        async function loadSchedules() {
+            try {
+                const response = await fetch('data/schedule.json');
+                allSchedules = await response.json();
+                filteredSchedules = [...allSchedules];
+                
+                // 按日期降序排序（最新的在前）
+                filteredSchedules.sort((a, b) => {
+                    const dateCompare = new Date(b.date) - new Date(a.date);
+                    if (dateCompare !== 0) return dateCompare;
+                    return new Date(b.submitted_at) - new Date(a.submitted_at);
+                });
+                
+                updateDisplay();
+            } catch (error) {
+                console.error('載入登記紀錄失敗:', error);
+                showNoData();
+            }
+        }
+
+        // 設定事件監聽器
+        function setupEventListeners() {
+            document.getElementById('applyFilters').addEventListener('click', applyFilters);
+            document.getElementById('clearFilters').addEventListener('click', clearFilters);
+            
+            // Enter 鍵也可以套用篩選
+            document.getElementById('filterLocation').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') applyFilters();
+            });
+        }
+
+        // 套用篩選
+        function applyFilters() {
+            const vendorId = document.getElementById('filterVendor').value;
+            const location = document.getElementById('filterLocation').value.trim().toLowerCase();
+            const date = document.getElementById('filterDate').value;
+
+            filteredSchedules = allSchedules.filter(schedule => {
+                // 攤主篩選
+                if (vendorId && schedule.vendor_id !== vendorId) return false;
+                
+                // 地點篩選（模糊搜尋）
+                if (location && 
+                    !schedule.booth_location.toLowerCase().includes(location) &&
+                    !schedule.booth_name.toLowerCase().includes(location)) {
+                    return false;
+                }
+                
+                // 日期篩選
+                if (date && schedule.date !== date) return false;
+                
+                return true;
+            });
+
+            // 排序
+            filteredSchedules.sort((a, b) => {
+                const dateCompare = new Date(b.date) - new Date(a.date);
+                if (dateCompare !== 0) return dateCompare;
+                return new Date(b.submitted_at) - new Date(a.submitted_at);
+            });
+
+            updateDisplay();
+        }
+
+        // 清除篩選
+        function clearFilters() {
+            document.getElementById('filterVendor').value = '';
+            document.getElementById('filterLocation').value = '';
+            document.getElementById('filterDate').value = '';
+            
+            filteredSchedules = [...allSchedules];
+            filteredSchedules.sort((a, b) => {
+                const dateCompare = new Date(b.date) - new Date(a.date);
+                if (dateCompare !== 0) return dateCompare;
+                return new Date(b.submitted_at) - new Date(a.submitted_at);
+            });
+            
+            updateDisplay();
+        }
+
+        // 更新顯示
+        function updateDisplay() {
+            const tbody = document.getElementById('scheduleBody');
+            const noDataMessage = document.getElementById('noDataMessage');
+            const table = document.getElementById('scheduleTable');
+
+            // 更新統計
+            document.getElementById('totalCount').textContent = allSchedules.length;
+            document.getElementById('displayCount').textContent = filteredSchedules.length;
+
+            if (filteredSchedules.length === 0) {
+                table.style.display = 'none';
+                noDataMessage.style.display = 'block';
+                return;
+            }
+
+            table.style.display = 'table';
+            noDataMessage.style.display = 'none';
+            tbody.innerHTML = '';
+
+            filteredSchedules.forEach((schedule, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td><strong>${schedule.vendor_name}</strong><br><small class="text-muted">${schedule.vendor_id}</small></td>
+                    <td><strong>${schedule.booth_location}</strong><br><small class="text-muted">${schedule.booth_name}</small></td>
+                    <td>${formatDate(schedule.date)}</td>
+                    <td>${formatDateTime(schedule.submitted_at)}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // 顯示無資料訊息
+        function showNoData() {
+            document.getElementById('scheduleTable').style.display = 'none';
+            document.getElementById('noDataMessage').style.display = 'block';
+            document.getElementById('totalCount').textContent = '0';
+            document.getElementById('displayCount').textContent = '0';
+        }
+
+        // 格式化日期
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const weekdays = ['日', '一', '二', '三', '四', '五', '六'];
+            const weekday = weekdays[date.getDay()];
+            return `${year}-${month}-${day} (${weekday})`;
+        }
+
+        // 格式化日期時間
+        function formatDateTime(dateTimeString) {
+            const date = new Date(dateTimeString);
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            return `${year}-${month}-${day} ${hours}:${minutes}`;
+        }
+    </script>
+</body>
+</html>

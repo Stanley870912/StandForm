@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>攤位登記系統</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        .container {
+            max-width: 600px;
+        }
+        .card {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: none;
+            border-radius: 15px;
+        }
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px 15px 0 0 !important;
+            padding: 20px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+        .alert {
+            border-radius: 10px;
+        }
+        .new-location-hint {
+            font-size: 0.875rem;
+            color: #28a745;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header text-center">
+                <h2 class="mb-0">🏪 攤位登記系統</h2>
+            </div>
+            <div class="card-body p-4">
+                <!-- 提示訊息 -->
+                <div id="messageContainer"></div>
+
+                <!-- 登記表單 -->
+                <form id="registrationForm">
+                    <!-- 攤主選擇 -->
+                    <div class="mb-3">
+                        <label for="vendorSelect" class="form-label">攤主 <span class="text-danger">*</span></label>
+                        <select class="form-select" id="vendorSelect" required>
+                            <option value="">請選擇攤主</option>
+                        </select>
+                    </div>
+
+                    <!-- 攤位地點 -->
+                    <div class="mb-3">
+                        <label for="boothLocation" class="form-label">攤位地點 <span class="text-danger">*</span></label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="boothLocation" 
+                            list="boothList"
+                            placeholder="輸入或選擇攤位地點"
+                            required
+                            autocomplete="off"
+                        >
+                        <datalist id="boothList"></datalist>
+                        <div id="newLocationHint" class="new-location-hint" style="display: none;">
+                            ℹ️ 這是新地點，將會自動新增到系統中
+                        </div>
+                    </div>
+
+                    <!-- 日期選擇 -->
+                    <div class="mb-4">
+                        <label for="dateSelect" class="form-label">日期 <span class="text-danger">*</span></label>
+                        <input 
+                            type="date" 
+                            class="form-control" 
+                            id="dateSelect" 
+                            required
+                        >
+                    </div>
+
+                    <!-- 按鈕組 -->
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+                            <span id="submitBtnText">提交登記</span>
+                            <span id="submitBtnSpinner" class="spinner-border spinner-border-sm d-none" role="status">
+                                <span class="visually-hidden">處理中...</span>
+                            </span>
+                        </button>
+                        <a href="view.html" class="btn btn-outline-secondary">查看登記紀錄</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 全域變數
+        let vendors = [];
+        let booths = [];
+
+        // 頁面載入時初始化
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadVendors();
+            await loadBooths();
+            setDefaultDate();
+            setupEventListeners();
+        });
+
+        // 載入攤主清單
+        async function loadVendors() {
+            try {
+                const response = await fetch('data/vendors.json');
+                vendors = await response.json();
+                
+                const vendorSelect = document.getElementById('vendorSelect');
+                vendors.forEach(vendor => {
+                    const option = document.createElement('option');
+                    option.value = vendor.vendor_id;
+                    option.textContent = vendor.vendor_name;
+                    vendorSelect.appendChild(option);
+                });
+            } catch (error) {
+                console.error('載入攤主清單失敗:', error);
+                showMessage('無法載入攤主清單，請稍後再試', 'danger');
+            }
+        }
+
+        // 載入攤位清單
+        async function loadBooths() {
+            try {
+                const response = await fetch('data/booths.json');
+                booths = await response.json();
+                
+                const boothList = document.getElementById('boothList');
+                booths.forEach(booth => {
+                    const option = document.createElement('option');
+                    option.value = booth.booth_location;
+                    option.textContent = `${booth.booth_location} - ${booth.booth_name}`;
+                    boothList.appendChild(option);
+                });
+            } catch (error) {
+                console.error('載入攤位清單失敗:', error);
+            }
+        }
+
+        // 設定預設日期為今天
+        function setDefaultDate() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('dateSelect').value = today;
+        }
+
+        // 設定事件監聽器
+        function setupEventListeners() {
+            // 監聽攤位地點輸入，檢查是否為新地點
+            const boothLocationInput = document.getElementById('boothLocation');
+            boothLocationInput.addEventListener('input', (e) => {
+                const inputValue = e.target.value.trim();
+                const hint = document.getElementById('newLocationHint');
+                
+                if (inputValue) {
+                    const isExisting = booths.some(booth => 
+                        booth.booth_location === inputValue
+                    );
+                    hint.style.display = isExisting ? 'none' : 'block';
+                } else {
+                    hint.style.display = 'none';
+                }
+            });
+
+            // 表單提交
+            document.getElementById('registrationForm').addEventListener('submit', handleSubmit);
+        }
+
+        // 處理表單提交
+        async function handleSubmit(e) {
+            e.preventDefault();
+            
+            const vendorId = document.getElementById('vendorSelect').value;
+            const boothLocation = document.getElementById('boothLocation').value.trim();
+            const date = document.getElementById('dateSelect').value;
+
+            // 驗證
+            if (!vendorId || !boothLocation || !date) {
+                showMessage('請填寫所有必填欄位', 'warning');
+                return;
+            }
+
+            // 顯示載入狀態
+            setLoading(true);
+
+            try {
+                const response = await fetch('/.netlify/functions/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        vendor_id: vendorId,
+                        booth_location: boothLocation,
+                        date: date
+                    })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showMessage(result.message || '登記成功！', 'success');
+                    document.getElementById('registrationForm').reset();
+                    setDefaultDate();
+                    document.getElementById('newLocationHint').style.display = 'none';
+                    
+                    // 重新載入攤位清單（如果有新增）
+                    await loadBooths();
+                } else {
+                    showMessage(result.error || '登記失敗，請稍後再試', 'danger');
+                }
+            } catch (error) {
+                console.error('提交失敗:', error);
+                showMessage('網路錯誤，請檢查連線後再試', 'danger');
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        // 顯示訊息
+        function showMessage(message, type) {
+            const container = document.getElementById('messageContainer');
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+            alertDiv.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            container.innerHTML = '';
+            container.appendChild(alertDiv);
+
+            // 3秒後自動關閉
+            setTimeout(() => {
+                alertDiv.classList.remove('show');
+                setTimeout(() => alertDiv.remove(), 150);
+            }, 3000);
+        }
+
+        // 設定載入狀態
+        function setLoading(isLoading) {
+            const submitBtn = document.getElementById('submitBtn');
+            const submitBtnText = document.getElementById('submitBtnText');
+            const submitBtnSpinner = document.getElementById('submitBtnSpinner');
+
+            submitBtn.disabled = isLoading;
+            
+            if (isLoading) {
+                submitBtnText.textContent = '處理中...';
+                submitBtnSpinner.classList.remove('d-none');
+            } else {
+                submitBtnText.textContent = '提交登記';
+                submitBtnSpinner.classList.add('d-none');
+            }
+        }
+    </script>
+</body>
+</html>
