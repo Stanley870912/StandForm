@@ -413,15 +413,11 @@
                     `<span class="badge ${schedule.vendor_category === '糖果' ? 'bg-info' : 'bg-warning'}">${schedule.vendor_category}</span>` : 
                     '<span class="badge bg-secondary">未分類</span>';
                 
-                // GPS 位置顯示（如果有的話）
-                const gpsInfo = schedule.gps_location ? 
-                    `<br><small class="text-muted" title="GPS: ${schedule.gps_location.latitude}, ${schedule.gps_location.longitude}">📍</small>` : '';
-                
                 row.innerHTML = `
                     <td>${index + 1}</td>
                     <td><strong>${schedule.vendor_name}</strong><br><small class="text-muted">${schedule.vendor_id}</small></td>
                     <td>${categoryBadge}</td>
-                    <td><strong>${schedule.booth_location}</strong><br><small class="text-muted">${schedule.booth_name}</small>${gpsInfo}</td>
+                    <td><strong>${schedule.booth_location}</strong><br><small class="text-muted">${schedule.booth_name}</small></td>
                     <td>${formatDate(schedule.date)}</td>
                     <!--<td>${formatDateTime(schedule.submitted_at)}</td>-->
                     <td class="action-buttons">
