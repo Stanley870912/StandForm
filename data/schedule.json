@@ -6,5 +6,13 @@
     "booth_name": "中庭攤位A1",
     "date": "2025-11-02",
     "submitted_at": "2025-11-02T05:12:02.616Z"
+  },
+  {
+    "vendor_id": "V002",
+    "vendor_name": "李小華咖啡站",
+    "booth_location": "B2",
+    "booth_name": "走廊攤位B2",
+    "date": "2025-11-03",
+    "submitted_at": "2025-11-02T05:12:53.612Z"
   }
 ]
