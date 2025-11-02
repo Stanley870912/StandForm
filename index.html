@@ -202,6 +202,28 @@
             // 顯示載入狀態
             setLoading(true);
 
+            // 取得 GPS 位置
+            let gpsLocation = null;
+            try {
+                if (navigator.geolocation) {
+                    const position = await new Promise((resolve, reject) => {
+                        navigator.geolocation.getCurrentPosition(resolve, reject, {
+                            timeout: 5000,
+                            maximumAge: 0
+                        });
+                    });
+                    gpsLocation = {
+                        latitude: position.coords.latitude,
+                        longitude: position.coords.longitude,
+                        accuracy: position.coords.accuracy,
+                        timestamp: new Date().toISOString()
+                    };
+                }
+            } catch (error) {
+                console.log('無法取得 GPS 位置:', error);
+                // GPS 取得失敗不影響登記流程
+            }
+
             try {
                 const response = await fetch('/.netlify/functions/submit', {
                     method: 'POST',
@@ -211,7 +233,8 @@
                     body: JSON.stringify({
                         vendor_id: vendorId,
                         booth_location: boothLocation,
-                        date: date
+                        date: date,
+                        gps_location: gpsLocation
                     })
                 });
 

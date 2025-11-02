@@ -19,7 +19,7 @@ exports.handler = async (event, context) => {
 
     try {
         // 解析請求資料
-        const { vendor_id, booth_location, date } = JSON.parse(event.body);
+        const { vendor_id, booth_location, date, gps_location } = JSON.parse(event.body);
 
         // 1️⃣ 驗證欄位
         if (!vendor_id || !booth_location || !date) {
@@ -147,7 +147,8 @@ exports.handler = async (event, context) => {
             booth_location,
             booth_name,
             date,
-            submitted_at: new Date().toISOString()
+            submitted_at: new Date().toISOString(),
+            gps_location: gps_location || null
         };
         schedule.push(newRecord);
 
