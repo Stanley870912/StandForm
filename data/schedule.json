@@ -1,34 +1,3 @@
 [
-  {
-    "vendor_id": "姑姑",
-    "vendor_name": "姑姑",
-    "booth_location": "彰化三民市場",
-    "booth_name": "彰化三民市場",
-    "date": "2025-11-02",
-    "submitted_at": "2025-11-02T05:24:25.364Z"
-  },
-  {
-    "vendor_id": "南一",
-    "vendor_name": "南一",
-    "booth_location": "金華",
-    "booth_name": "金華",
-    "date": "2025-11-02",
-    "submitted_at": "2025-11-02T05:36:25.917Z"
-  },
-  {
-    "vendor_id": "華姐",
-    "vendor_name": "華姐",
-    "booth_location": "台中大智市場",
-    "booth_name": "台中大智市場",
-    "date": "2025-11-02",
-    "submitted_at": "2025-11-02T05:36:59.123Z"
-  },
-  {
-    "vendor_id": "北一",
-    "vendor_name": "北一",
-    "booth_location": "彰化三民市場",
-    "booth_name": "彰化三民市場",
-    "date": "2025-11-03",
-    "submitted_at": "2025-11-02T06:11:30.635Z"
-  }
+  
 ]
