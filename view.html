@@ -63,6 +63,13 @@
             background-color: #667eea;
             border-color: #667eea;
         }
+        .action-buttons {
+            white-space: nowrap;
+        }
+        .btn-sm {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+        }
     </style>
 </head>
 <body>
@@ -118,10 +125,11 @@
                         <thead>
                             <tr>
                                 <th style="width: 5%;">#</th>
-                                <th style="width: 25%;">攤主</th>
-                                <th style="width: 30%;">攤位地點</th>
-                                <th style="width: 20%;">日期</th>
+                                <th style="width: 20%;">攤主</th>
+                                <th style="width: 25%;">攤位地點</th>
+                                <th style="width: 15%;">日期</th>
                                 <th style="width: 20%;">登記時間</th>
+                                <th style="width: 15%;">操作</th>
                             </tr>
                         </thead>
                         <tbody id="scheduleBody">
@@ -145,18 +153,77 @@
         </div>
     </div>
 
+    <!-- 編輯地點模態框 -->
+    <div class="modal fade" id="editModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">✏️ 修改攤位地點</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="editMessageContainer"></div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label"><strong>攤主：</strong></label>
+                        <p id="editVendorName" class="mb-0"></p>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label"><strong>日期：</strong></label>
+                        <p id="editDate" class="mb-0"></p>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label"><strong>目前地點：</strong></label>
+                        <p id="editCurrentLocation" class="mb-0 text-muted"></p>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="editNewLocation" class="form-label">新地點 <span class="text-danger">*</span></label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="editNewLocation" 
+                            list="editBoothList"
+                            placeholder="輸入或選擇新的攤位地點"
+                            required
+                            autocomplete="off"
+                        >
+                        <datalist id="editBoothList"></datalist>
+                        <div id="editNewLocationHint" class="text-success mt-1" style="font-size: 0.875rem; display: none;">
+                            ℹ️ 這是新地點，將會自動新增到系統中
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="saveEditBtn">
+                        <span id="saveEditBtnText">儲存變更</span>
+                        <span id="saveEditBtnSpinner" class="spinner-border spinner-border-sm d-none" role="status"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // 全域變數
         let allSchedules = [];
         let filteredSchedules = [];
         let vendors = [];
+        let booths = [];
+        let editingSchedule = null;
+        let editModal = null;
 
         // 頁面載入時初始化
         document.addEventListener('DOMContentLoaded', async () => {
             await loadVendors();
+            await loadBooths();
             await loadSchedules();
             setupEventListeners();
+            editModal = new bootstrap.Modal(document.getElementById('editModal'));
         });
 
         // 載入攤主清單
@@ -174,6 +241,24 @@
                 });
             } catch (error) {
                 console.error('載入攤主清單失敗:', error);
+            }
+        }
+
+        // 載入攤位清單
+        async function loadBooths() {
+            try {
+                const response = await fetch('data/booths.json');
+                booths = await response.json();
+                
+                const editBoothList = document.getElementById('editBoothList');
+                booths.forEach(booth => {
+                    const option = document.createElement('option');
+                    option.value = booth.booth_location;
+                    option.textContent = `${booth.booth_location} - ${booth.booth_name}`;
+                    editBoothList.appendChild(option);
+                });
+            } catch (error) {
+                console.error('載入攤位清單失敗:', error);
             }
         }
 
@@ -207,6 +292,24 @@
             document.getElementById('filterLocation').addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') applyFilters();
             });
+
+            // 編輯地點輸入監聽
+            document.getElementById('editNewLocation').addEventListener('input', (e) => {
+                const inputValue = e.target.value.trim();
+                const hint = document.getElementById('editNewLocationHint');
+                
+                if (inputValue && inputValue !== editingSchedule?.booth_location) {
+                    const isExisting = booths.some(booth => 
+                        booth.booth_location === inputValue
+                    );
+                    hint.style.display = isExisting ? 'none' : 'block';
+                } else {
+                    hint.style.display = 'none';
+                }
+            });
+
+            // 儲存編輯按鈕
+            document.getElementById('saveEditBtn').addEventListener('click', saveEdit);
         }
 
         // 套用篩選
@@ -282,13 +385,117 @@
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${index + 1}</td>
-                    <td><strong>${schedule.vendor_name}</strong></td>
-                    <td><strong>${schedule.booth_location}</strong></td>
+                    <td><strong>${schedule.vendor_name}</strong><br><small class="text-muted">${schedule.vendor_id}</small></td>
+                    <td><strong>${schedule.booth_location}</strong><br><small class="text-muted">${schedule.booth_name}</small></td>
                     <td>${formatDate(schedule.date)}</td>
                     <td>${formatDateTime(schedule.submitted_at)}</td>
+                    <td class="action-buttons">
+                        <button class="btn btn-sm btn-warning" onclick="openEditModal(${index})">
+                            ✏️ 改地點
+                        </button>
+                    </td>
                 `;
                 tbody.appendChild(row);
             });
+        }
+
+        // 開啟編輯模態框
+        function openEditModal(index) {
+            editingSchedule = filteredSchedules[index];
+            
+            // 填入當前資料
+            document.getElementById('editVendorName').textContent = editingSchedule.vendor_name;
+            document.getElementById('editDate').textContent = formatDate(editingSchedule.date);
+            document.getElementById('editCurrentLocation').textContent = `${editingSchedule.booth_location} - ${editingSchedule.booth_name}`;
+            document.getElementById('editNewLocation').value = editingSchedule.booth_location;
+            document.getElementById('editNewLocationHint').style.display = 'none';
+            document.getElementById('editMessageContainer').innerHTML = '';
+            
+            // 顯示模態框
+            editModal.show();
+        }
+
+        // 儲存編輯
+        async function saveEdit() {
+            const newLocation = document.getElementById('editNewLocation').value.trim();
+            
+            // 驗證
+            if (!newLocation) {
+                showEditMessage('請輸入新的攤位地點', 'warning');
+                return;
+            }
+
+            if (newLocation === editingSchedule.booth_location) {
+                showEditMessage('新地點與原地點相同，無需修改', 'info');
+                return;
+            }
+
+            // 顯示載入狀態
+            setEditLoading(true);
+
+            try {
+                const response = await fetch('/.netlify/functions/update', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        vendor_id: editingSchedule.vendor_id,
+                        date: editingSchedule.date,
+                        new_booth_location: newLocation
+                    })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showEditMessage(result.message || '修改成功！', 'success');
+                    
+                    // 延遲關閉並重新載入
+                    setTimeout(async () => {
+                        editModal.hide();
+                        await loadBooths();
+                        await loadSchedules();
+                    }, 1500);
+                } else {
+                    showEditMessage(result.error || '修改失敗，請稍後再試', 'danger');
+                }
+            } catch (error) {
+                console.error('修改失敗:', error);
+                showEditMessage('網路錯誤，請檢查連線後再試', 'danger');
+            } finally {
+                setEditLoading(false);
+            }
+        }
+
+        // 顯示編輯訊息
+        function showEditMessage(message, type) {
+            const container = document.getElementById('editMessageContainer');
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+            alertDiv.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            container.innerHTML = '';
+            container.appendChild(alertDiv);
+        }
+
+        // 設定編輯載入狀態
+        function setEditLoading(isLoading) {
+            const saveBtn = document.getElementById('saveEditBtn');
+            const saveBtnText = document.getElementById('saveEditBtnText');
+            const saveBtnSpinner = document.getElementById('saveEditBtnSpinner');
+
+            saveBtn.disabled = isLoading;
+            
+            if (isLoading) {
+                saveBtnText.textContent = '處理中...';
+                saveBtnSpinner.classList.remove('d-none');
+            } else {
+                saveBtnText.textContent = '儲存變更';
+                saveBtnSpinner.classList.add('d-none');
+            }
         }
 
         // 顯示無資料訊息
