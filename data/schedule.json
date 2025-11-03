@@ -118,5 +118,20 @@
       "accuracy": 21.91020104787834,
       "timestamp": "2025-11-03T03:20:00.584Z"
     }
+  },
+  {
+    "vendor_id": "北十一",
+    "vendor_name": "北十一",
+    "vendor_category": "餅乾",
+    "booth_location": "彰化三民市場",
+    "booth_name": "彰化三民市場",
+    "date": "2025-11-11",
+    "submitted_at": "2025-11-03T03:20:12.409Z",
+    "gps_location": {
+      "latitude": 23.56344561358425,
+      "longitude": 119.58351535675806,
+      "accuracy": 32.450425011198675,
+      "timestamp": "2025-11-03T03:20:11.551Z"
+    }
   }
 ]
