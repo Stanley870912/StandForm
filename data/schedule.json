@@ -1,2 +1,17 @@
 [
+  {
+    "vendor_id": "北三",
+    "vendor_name": "北三",
+    "vendor_category": "餅乾",
+    "booth_location": "彰化三民市場",
+    "booth_name": "彰化三民市場",
+    "date": "2025-11-03",
+    "submitted_at": "2025-11-03T11:47:51.773Z",
+    "gps_location": {
+      "latitude": 23.56371763221871,
+      "longitude": 119.58328849922952,
+      "accuracy": 22.475362109169843,
+      "timestamp": "2025-11-03T11:47:49.930Z"
+    }
+  }
 ]
