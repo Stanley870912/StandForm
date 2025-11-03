@@ -223,5 +223,20 @@
       "accuracy": 35.357417286253856,
       "timestamp": "2025-11-03T03:21:48.117Z"
     }
+  },
+  {
+    "vendor_id": "小蝦米",
+    "vendor_name": "小蝦米",
+    "vendor_category": "糖果",
+    "booth_location": "台中大智市場",
+    "booth_name": "台中大智市場",
+    "date": "2025-11-09",
+    "submitted_at": "2025-11-03T03:23:49.844Z",
+    "gps_location": {
+      "latitude": 23.56344897711696,
+      "longitude": 119.58351131868432,
+      "accuracy": 21.42598737291743,
+      "timestamp": "2025-11-03T03:23:49.379Z"
+    }
   }
 ]
