@@ -373,5 +373,20 @@
       "accuracy": 21.991796574535325,
       "timestamp": "2025-11-03T03:27:01.042Z"
     }
+  },
+  {
+    "vendor_id": "北十",
+    "vendor_name": "北十",
+    "vendor_category": "糖果",
+    "booth_location": "台中大智市場",
+    "booth_name": "台中大智市場",
+    "date": "2025-11-30",
+    "submitted_at": "2025-11-03T03:35:59.580Z",
+    "gps_location": {
+      "latitude": 23.56344884000429,
+      "longitude": 119.58351147483374,
+      "accuracy": 21.808143096349514,
+      "timestamp": "2025-11-03T03:35:58.412Z"
+    }
   }
 ]
