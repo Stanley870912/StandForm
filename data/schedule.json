@@ -193,5 +193,20 @@
       "accuracy": 21.964186232984645,
       "timestamp": "2025-11-03T03:21:22.685Z"
     }
+  },
+  {
+    "vendor_id": "南五",
+    "vendor_name": "南五",
+    "vendor_category": "餅乾",
+    "booth_location": "台中大智市場",
+    "booth_name": "台中大智市場",
+    "date": "2025-11-07",
+    "submitted_at": "2025-11-03T03:21:35.841Z",
+    "gps_location": {
+      "latitude": 23.563448801079158,
+      "longitude": 119.58351151024998,
+      "accuracy": 21.975992705849418,
+      "timestamp": "2025-11-03T03:21:34.319Z"
+    }
   }
 ]
