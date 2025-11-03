@@ -178,5 +178,20 @@
       "accuracy": 21.960395316073626,
       "timestamp": "2025-11-03T03:21:09.352Z"
     }
+  },
+  {
+    "vendor_id": "南四",
+    "vendor_name": "南四",
+    "vendor_category": "",
+    "booth_location": "台中大智市場",
+    "booth_name": "台中大智市場",
+    "date": "2025-11-06",
+    "submitted_at": "2025-11-03T03:21:23.109Z",
+    "gps_location": {
+      "latitude": 23.563447421064893,
+      "longitude": 119.58351317558152,
+      "accuracy": 21.964186232984645,
+      "timestamp": "2025-11-03T03:21:22.685Z"
+    }
   }
 ]
