@@ -313,5 +313,20 @@
       "accuracy": 15.996587132322098,
       "timestamp": "2025-11-03T03:25:43.802Z"
     }
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "台中大智市場",
+    "booth_name": "台中大智市場",
+    "date": "2025-11-15",
+    "submitted_at": "2025-11-03T03:25:57.240Z",
+    "gps_location": {
+      "latitude": 23.563448275506058,
+      "longitude": 119.58351214448506,
+      "accuracy": 21.981838142751627,
+      "timestamp": "2025-11-03T03:25:56.735Z"
+    }
   }
 ]
