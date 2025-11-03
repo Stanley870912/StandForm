@@ -253,5 +253,20 @@
       "accuracy": 83.48103853167846,
       "timestamp": "2025-11-03T03:24:10.133Z"
     }
+  },
+  {
+    "vendor_id": "小妹",
+    "vendor_name": "小妹",
+    "vendor_category": "餅乾",
+    "booth_location": "台中大智市場",
+    "booth_name": "台中大智市場",
+    "date": "2025-11-11",
+    "submitted_at": "2025-11-03T03:24:35.252Z",
+    "gps_location": {
+      "latitude": 23.563449997990773,
+      "longitude": 119.58351012277473,
+      "accuracy": 21.971611138161336,
+      "timestamp": "2025-11-03T03:24:34.395Z"
+    }
   }
 ]
