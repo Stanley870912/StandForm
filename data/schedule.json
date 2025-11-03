@@ -283,5 +283,20 @@
       "accuracy": 21.96126120892654,
       "timestamp": "2025-11-03T03:24:48.926Z"
     }
+  },
+  {
+    "vendor_id": "華姐",
+    "vendor_name": "華姐",
+    "vendor_category": "糖果",
+    "booth_location": "台中大智市場",
+    "booth_name": "台中大智市場",
+    "date": "2025-11-13",
+    "submitted_at": "2025-11-03T03:25:09.026Z",
+    "gps_location": {
+      "latitude": 23.56344861133931,
+      "longitude": 119.58351173922136,
+      "accuracy": 21.939224307057156,
+      "timestamp": "2025-11-03T03:25:07.867Z"
+    }
   }
 ]
