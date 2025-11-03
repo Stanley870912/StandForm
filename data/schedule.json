@@ -238,5 +238,20 @@
       "accuracy": 21.42598737291743,
       "timestamp": "2025-11-03T03:23:49.379Z"
     }
+  },
+  {
+    "vendor_id": "阿邦",
+    "vendor_name": "阿邦",
+    "vendor_category": "餅乾",
+    "booth_location": "台中大智市場",
+    "booth_name": "台中大智市場",
+    "date": "2025-11-10",
+    "submitted_at": "2025-11-03T03:24:11.346Z",
+    "gps_location": {
+      "latitude": 23.563400590320718,
+      "longitude": 119.58357052609011,
+      "accuracy": 83.48103853167846,
+      "timestamp": "2025-11-03T03:24:10.133Z"
+    }
   }
 ]
