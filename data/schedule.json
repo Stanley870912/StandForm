@@ -343,5 +343,20 @@
       "accuracy": 21.99010135199597,
       "timestamp": "2025-11-03T03:26:09.251Z"
     }
+  },
+  {
+    "vendor_id": "阿證",
+    "vendor_name": "阿證",
+    "vendor_category": "餅乾",
+    "booth_location": "彰化三民市場",
+    "booth_name": "彰化三民市場",
+    "date": "2025-11-23",
+    "submitted_at": "2025-11-03T03:26:50.071Z",
+    "gps_location": {
+      "latitude": 23.56345278785219,
+      "longitude": 119.58350669921333,
+      "accuracy": 21.99010135199597,
+      "timestamp": "2025-11-03T03:26:49.601Z"
+    }
   }
 ]
