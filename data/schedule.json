@@ -133,5 +133,20 @@
       "accuracy": 32.450425011198675,
       "timestamp": "2025-11-03T03:20:11.551Z"
     }
+  },
+  {
+    "vendor_id": "南一",
+    "vendor_name": "南一",
+    "vendor_category": "糖果",
+    "booth_location": "台中大智市場",
+    "booth_name": "台中大智市場",
+    "date": "2025-11-03",
+    "submitted_at": "2025-11-03T03:20:41.603Z",
+    "gps_location": {
+      "latitude": 23.56344649795641,
+      "longitude": 119.5835142895423,
+      "accuracy": 21.201313611503608,
+      "timestamp": "2025-11-03T03:20:40.750Z"
+    }
   }
 ]
