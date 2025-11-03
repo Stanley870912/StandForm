@@ -268,5 +268,20 @@
       "accuracy": 21.971611138161336,
       "timestamp": "2025-11-03T03:24:34.395Z"
     }
+  },
+  {
+    "vendor_id": "菁洳",
+    "vendor_name": "菁洳",
+    "vendor_category": "糖果",
+    "booth_location": "台中大智市場",
+    "booth_name": "台中大智市場",
+    "date": "2025-11-12",
+    "submitted_at": "2025-11-03T03:24:50.153Z",
+    "gps_location": {
+      "latitude": 23.563450918297953,
+      "longitude": 119.58350897878613,
+      "accuracy": 21.96126120892654,
+      "timestamp": "2025-11-03T03:24:48.926Z"
+    }
   }
 ]
