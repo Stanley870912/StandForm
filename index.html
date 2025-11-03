@@ -142,10 +142,17 @@
         // 載入攤位清單
         async function loadBooths() {
             try {
-                const response = await fetch('data/booths.json');
+                // 加上時間戳避免快取
+                const timestamp = new Date().getTime();
+                const response = await fetch(`data/booths.json?t=${timestamp}`);
                 booths = await response.json();
                 
                 const boothList = document.getElementById('boothList');
+                // 完全清空並重建選項
+                while (boothList.firstChild) {
+                    boothList.removeChild(boothList.firstChild);
+                }
+                
                 booths.forEach(booth => {
                     const option = document.createElement('option');
                     option.value = booth.booth_location;
