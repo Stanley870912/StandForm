@@ -298,5 +298,20 @@
       "accuracy": 21.939224307057156,
       "timestamp": "2025-11-03T03:25:07.867Z"
     }
+  },
+  {
+    "vendor_id": "姑姑",
+    "vendor_name": "姑姑",
+    "vendor_category": "餅乾",
+    "booth_location": "台中大智市場",
+    "booth_name": "台中大智市場",
+    "date": "2025-11-14",
+    "submitted_at": "2025-11-03T03:25:44.986Z",
+    "gps_location": {
+      "latitude": 23.56344862607001,
+      "longitude": 119.58351172144215,
+      "accuracy": 15.996587132322098,
+      "timestamp": "2025-11-03T03:25:43.802Z"
+    }
   }
 ]
