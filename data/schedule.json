@@ -28,5 +28,20 @@
       "accuracy": 22.985758691545808,
       "timestamp": "2025-11-03T11:48:11.594Z"
     }
+  },
+  {
+    "vendor_id": "北八",
+    "vendor_name": "北八",
+    "vendor_category": "糖果",
+    "booth_location": "彰化三民市場",
+    "booth_name": "彰化三民市場",
+    "date": "2025-11-05",
+    "submitted_at": "2025-11-03T11:48:29.265Z",
+    "gps_location": {
+      "latitude": 23.563888546695466,
+      "longitude": 119.58313737858771,
+      "accuracy": 28.859869291857933,
+      "timestamp": "2025-11-03T11:48:28.015Z"
+    }
   }
 ]
