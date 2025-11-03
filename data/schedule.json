@@ -358,5 +358,20 @@
       "accuracy": 21.99010135199597,
       "timestamp": "2025-11-03T03:26:49.601Z"
     }
+  },
+  {
+    "vendor_id": "甯",
+    "vendor_name": "甯",
+    "vendor_category": "糖果",
+    "booth_location": "台中大智市場",
+    "booth_name": "台中大智市場",
+    "date": "2025-11-24",
+    "submitted_at": "2025-11-03T03:27:01.504Z",
+    "gps_location": {
+      "latitude": 23.56345229238821,
+      "longitude": 119.58350729711428,
+      "accuracy": 21.991796574535325,
+      "timestamp": "2025-11-03T03:27:01.042Z"
+    }
   }
 ]
