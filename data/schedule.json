@@ -43,5 +43,20 @@
       "accuracy": 11.39799976348877,
       "timestamp": "2025-11-04T13:44:17.007Z"
     }
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "彰化北斗",
+    "booth_name": "彰化北斗",
+    "date": "2025-11-06",
+    "submitted_at": "2025-11-04T13:44:29.351Z",
+    "gps_location": {
+      "latitude": 24.0658504,
+      "longitude": 120.4359159,
+      "accuracy": 13.491000175476074,
+      "timestamp": "2025-11-04T13:44:27.630Z"
+    }
   }
 ]
