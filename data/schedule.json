@@ -73,5 +73,20 @@
       "accuracy": 11.87399959564209,
       "timestamp": "2025-11-04T13:44:45.628Z"
     }
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "台中霧峰",
+    "booth_name": "台中霧峰",
+    "date": "2025-11-09",
+    "submitted_at": "2025-11-04T13:45:16.468Z",
+    "gps_location": {
+      "latitude": 24.0658965,
+      "longitude": 120.4358994,
+      "accuracy": 14.883999824523926,
+      "timestamp": "2025-11-04T13:45:14.383Z"
+    }
   }
 ]
