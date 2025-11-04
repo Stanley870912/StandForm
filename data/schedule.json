@@ -63,8 +63,8 @@
     "vendor_id": "北五",
     "vendor_name": "北五",
     "vendor_category": "餅乾",
-    "booth_location": "台南灣裡",
-    "booth_name": "台南灣裡",
+    "booth_location": "台南新營",
+    "booth_name": "台南新營",
     "date": "2025-11-06",
     "submitted_at": "2025-11-04T13:44:47.788Z",
     "gps_location": {
@@ -72,7 +72,8 @@
       "longitude": 120.4359308,
       "accuracy": 11.87399959564209,
       "timestamp": "2025-11-04T13:44:45.628Z"
-    }
+    },
+    "updated_at": "2025-11-04T13:47:43.005Z"
   },
   {
     "vendor_id": "小愛",
