@@ -104,5 +104,20 @@
       "accuracy": 13.151000022888184,
       "timestamp": "2025-11-04T13:47:24.401Z"
     }
+  },
+  {
+    "vendor_id": "北三",
+    "vendor_name": "北三",
+    "vendor_category": "餅乾",
+    "booth_location": "台中大智市場",
+    "booth_name": "台中大智市場",
+    "date": "2025-11-06",
+    "submitted_at": "2025-11-06T07:17:54.053Z",
+    "gps_location": {
+      "latitude": 23.563328145755793,
+      "longitude": 119.58339997341639,
+      "accuracy": 24.989690676698945,
+      "timestamp": "2025-11-06T07:17:53.121Z"
+    }
   }
 ]
