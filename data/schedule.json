@@ -38,5 +38,20 @@
     "date": "2025-11-12",
     "submitted_at": "2025-11-07T11:59:30.926Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "高雄茄萣市場",
+    "booth_name": "高雄茄萣市場",
+    "date": "2025-11-19",
+    "submitted_at": "2025-11-07T15:25:03.941Z",
+    "gps_location": {
+      "latitude": 25.08351185472966,
+      "longitude": 121.54852906596028,
+      "accuracy": 16.095506323150115,
+      "timestamp": "2025-11-07T15:25:03.045Z"
+    }
   }
 ]
