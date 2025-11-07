@@ -70,6 +70,24 @@
             padding: 0.25rem 0.5rem;
             font-size: 0.875rem;
         }
+        /* 時間分組樣式 */
+        .time-group-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 12px;
+            border: none;
+        }
+        .time-group-row {
+            background-color: #f8f9fa;
+            border-left: 4px solid #667eea;
+        }
+        .time-group-row td {
+            border-top: 2px solid #667eea;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
     </style>
 </head>
 <body>
@@ -132,12 +150,11 @@
                         <thead>
                             <tr>
                                 <th style="width: 5%;">#</th>
-                                <th style="width: 18%;">攤主</th>
-                                <th style="width: 12%;">類別</th>
-                                <th style="width: 22%;">攤位地點</th>
-                                <th style="width: 13%;">日期</th>
-                                <!-- <th style="width: 20%;">登記時間</th> -->
-                                <th style="width: 15%;">操作</th>
+                                <th style="width: 25%;">攤主</th>
+                                <th style="width: 15%;">類別</th>
+                                <th style="width: 35%;">攤位地點</th>
+                                <!-- 移除日期欄位，改用橫向時間列 -->
+                                <th style="width: 20%;">操作</th>
                             </tr>
                         </thead>
                         <tbody id="scheduleBody">
@@ -407,32 +424,71 @@
             noDataMessage.style.display = 'none';
             tbody.innerHTML = '';
 
-            filteredSchedules.forEach((schedule, index) => {
-                const row = document.createElement('tr');
-                const categoryBadge = schedule.vendor_category ? 
-                    `<span class="badge ${schedule.vendor_category === '糖果' ? 'bg-info' : 'bg-warning'}">${schedule.vendor_category}</span>` : 
-                    '<span class="badge bg-secondary">未分類</span>';
-                
-                row.innerHTML = `
-                    <td>${index + 1}</td>
-                    <td><strong>${schedule.vendor_name}</strong></td>
-                    <td>${categoryBadge}</td>
-                    <td><strong>${schedule.booth_location}</strong></td>
-                    <td>${formatDate(schedule.date)}</td>
-                    <!--<td>${formatDateTime(schedule.submitted_at)}</td>-->
-                    <td class="action-buttons">
-                        <button class="btn btn-sm btn-warning" onclick="openEditModal(${index})">
-                            ✏️ 改地點
-                        </button>
+            // 按日期分組
+            const schedulesByDate = {};
+            filteredSchedules.forEach(schedule => {
+                if (!schedulesByDate[schedule.date]) {
+                    schedulesByDate[schedule.date] = [];
+                }
+                schedulesByDate[schedule.date].push(schedule);
+            });
+
+            // 按日期排序
+            const sortedDates = Object.keys(schedulesByDate).sort((a, b) => {
+                return new Date(a) - new Date(b);
+            });
+
+            let globalIndex = 0;
+            
+            // 為每個日期生成時間列和資料列
+            sortedDates.forEach(date => {
+                // 建立時間分組標題列
+                const timeHeaderRow = document.createElement('tr');
+                timeHeaderRow.className = 'time-group-header';
+                timeHeaderRow.innerHTML = `
+                    <td colspan="5" class="time-group-header">
+                        📅 ${formatDate(date)}
                     </td>
                 `;
-                tbody.appendChild(row);
+                tbody.appendChild(timeHeaderRow);
+
+                // 顯示該日期的所有紀錄
+                schedulesByDate[date].forEach(schedule => {
+                    globalIndex++;
+                    const row = document.createElement('tr');
+                    row.className = 'time-group-row';
+                    
+                    const categoryBadge = schedule.vendor_category ? 
+                        `<span class="badge ${schedule.vendor_category === '糖果' ? 'bg-info' : 'bg-warning'}">${schedule.vendor_category}</span>` : 
+                        '<span class="badge bg-secondary">未分類</span>';
+                    
+                    row.innerHTML = `
+                        <td>${globalIndex}</td>
+                        <td><strong>${schedule.vendor_name}</strong></td>
+                        <td>${categoryBadge}</td>
+                        <td><strong>${schedule.booth_location}</strong></td>
+                        <td class="action-buttons">
+                            <button class="btn btn-sm btn-warning" onclick="openEditModal('${schedule.vendor_id}', '${schedule.date}')">
+                                ✏️ 改地點
+                            </button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                });
             });
         }
 
         // 開啟編輯模態框
-        function openEditModal(index) {
-            editingSchedule = filteredSchedules[index];
+        function openEditModal(vendorId, date) {
+            // 根據vendorId和date找到對應的schedule
+            editingSchedule = filteredSchedules.find(s => 
+                s.vendor_id === vendorId && s.date === date
+            );
+            
+            if (!editingSchedule) {
+                console.error('找不到對應的登記紀錄');
+                return;
+            }
             
             // 填入當前資料
             document.getElementById('editVendorName').textContent = editingSchedule.vendor_name;
