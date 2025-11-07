@@ -119,5 +119,20 @@
       "accuracy": 24.989690676698945,
       "timestamp": "2025-11-06T07:17:53.121Z"
     }
+  },
+  {
+    "vendor_id": "南一",
+    "vendor_name": "南一",
+    "vendor_category": "糖果",
+    "booth_location": "台南新營",
+    "booth_name": "台南新營",
+    "date": "2025-11-10",
+    "submitted_at": "2025-11-07T11:57:16.881Z",
+    "gps_location": {
+      "latitude": 22.9899558,
+      "longitude": 120.1877663,
+      "accuracy": 69.7863998413086,
+      "timestamp": "2025-11-07T11:57:14.890Z"
+    }
   }
 ]
