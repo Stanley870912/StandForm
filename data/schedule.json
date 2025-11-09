@@ -83,5 +83,20 @@
       "accuracy": 100,
       "timestamp": "2025-11-09T07:28:04.049Z"
     }
+  },
+  {
+    "vendor_id": "南一",
+    "vendor_name": "南一",
+    "vendor_category": "糖果",
+    "booth_location": "高雄五甲國宅市場",
+    "booth_name": "高雄五甲國宅市場",
+    "date": "2025-11-15",
+    "submitted_at": "2025-11-09T07:28:35.145Z",
+    "gps_location": {
+      "latitude": 22.9917659,
+      "longitude": 120.2099109,
+      "accuracy": 100,
+      "timestamp": "2025-11-09T07:28:34.062Z"
+    }
   }
 ]
