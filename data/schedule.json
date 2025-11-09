@@ -53,5 +53,20 @@
       "accuracy": 16.095506323150115,
       "timestamp": "2025-11-07T15:25:03.045Z"
     }
+  },
+  {
+    "vendor_id": "南一",
+    "vendor_name": "南一",
+    "vendor_category": "糖果",
+    "booth_location": "屏東東港市場",
+    "booth_name": "屏東東港市場",
+    "date": "2025-11-13",
+    "submitted_at": "2025-11-09T07:27:34.769Z",
+    "gps_location": {
+      "latitude": 22.9917659,
+      "longitude": 120.2099109,
+      "accuracy": 100,
+      "timestamp": "2025-11-09T07:27:34.068Z"
+    }
   }
 ]
