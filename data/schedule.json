@@ -133,5 +133,20 @@
       "accuracy": 100,
       "timestamp": "2025-11-09T07:29:56.890Z"
     }
+  },
+  {
+    "vendor_id": "南二",
+    "vendor_name": "南二",
+    "vendor_category": "餅乾",
+    "booth_location": "台南崇德市場",
+    "booth_name": "台南崇德市場",
+    "date": "2025-11-11",
+    "submitted_at": "2025-11-10T13:10:01.310Z",
+    "gps_location": {
+      "latitude": 22.9928048,
+      "longitude": 120.2340855,
+      "accuracy": 52.30099868774414,
+      "timestamp": "2025-11-10T13:09:59.884Z"
+    }
   }
 ]
