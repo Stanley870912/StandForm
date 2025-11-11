@@ -504,5 +504,20 @@
       "accuracy": 22.001204930272138,
       "timestamp": "2025-11-11T13:01:48.136Z"
     }
+  },
+  {
+    "vendor_id": "北一",
+    "vendor_name": "北一",
+    "vendor_category": "餅乾",
+    "booth_location": "新北市板橋",
+    "booth_name": "新北市板橋",
+    "date": "2025-11-11",
+    "submitted_at": "2025-11-11T13:05:37.109Z",
+    "gps_location": {
+      "latitude": 24.8889207,
+      "longitude": 121.1700426,
+      "accuracy": 100,
+      "timestamp": "2025-11-11T13:05:36.028Z"
+    }
   }
 ]
