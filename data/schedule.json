@@ -679,5 +679,15 @@
       "accuracy": 100,
       "timestamp": "2025-11-11T20:40:19.208Z"
     }
+  },
+  {
+    "vendor_id": "甯",
+    "vendor_name": "甯",
+    "vendor_category": "糖果",
+    "booth_location": "雲林斗南",
+    "booth_name": "雲林斗南",
+    "date": "2025-11-20",
+    "submitted_at": "2025-11-11T21:05:54.934Z",
+    "gps_location": null
   }
 ]
