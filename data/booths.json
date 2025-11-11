@@ -70,5 +70,109 @@
   {
     "booth_location": "高雄岡山市場",
     "booth_name": "高雄岡山市場"
+  },
+  {
+    "booth_location": "台南崇德市場",
+    "booth_name": "台南崇德市場"
+  },
+  {
+    "booth_location": "桃園龜山",
+    "booth_name": "桃園龜山"
+  },
+  {
+    "booth_location": "台北國泰市場",
+    "booth_name": "台北國泰市場"
+  },
+  {
+    "booth_location": "板橋國泰市場",
+    "booth_name": "板橋國泰市場"
+  },
+  {
+    "booth_location": "台北虎林街市場",
+    "booth_name": "台北虎林街市場"
+  },
+  {
+    "booth_location": "新竹竹蓮市場",
+    "booth_name": "新竹竹蓮市場"
+  },
+  {
+    "booth_location": "台南金華市場",
+    "booth_name": "台南金華市場"
+  },
+  {
+    "booth_location": "台南水仙宮市場",
+    "booth_name": "台南水仙宮市場"
+  },
+  {
+    "booth_location": "台南佳里市場",
+    "booth_name": "台南佳里市場"
+  },
+  {
+    "booth_location": "新北永和溪州",
+    "booth_name": "新北永和溪州"
+  },
+  {
+    "booth_location": "桃園新明",
+    "booth_name": "桃園新明"
+  },
+  {
+    "booth_location": "桃園新民",
+    "booth_name": "桃園新民"
+  },
+  {
+    "booth_location": "新北三重力行市場",
+    "booth_name": "新北三重力行市場"
+  },
+  {
+    "booth_location": "台北虎林",
+    "booth_name": "台北虎林"
+  },
+  {
+    "booth_location": "桃園南門",
+    "booth_name": "桃園南門"
+  },
+  {
+    "booth_location": "桃園大溪",
+    "booth_name": "桃園大溪"
+  },
+  {
+    "booth_location": "桃園南門市場",
+    "booth_name": "桃園南門市場"
+  },
+  {
+    "booth_location": "台北雙連市場",
+    "booth_name": "台北雙連市場"
+  },
+  {
+    "booth_location": "台北東門市場",
+    "booth_name": "台北東門市場"
+  },
+  {
+    "booth_location": "台北士林華榮市場",
+    "booth_name": "台北士林華榮市場"
+  },
+  {
+    "booth_location": "台北天公廟",
+    "booth_name": "台北天公廟"
+  },
+  {
+    "booth_location": "新北裕民",
+    "booth_name": "新北裕民"
+  },
+  {
+    "booth_location": "台南六甲市場",
+    "booth_name": "台南六甲市場"
+  },
+  {
+    "booth_location": "新北中和南勢角",
+    "booth_name": "新北中和南勢角"
+  },
+  {
+    "booth_location": "高雄二苓市場",
+    "booth_name": "高雄二苓市場"
+  },
+  {
+    "booth_location": "高雄莒光市場",
+    "booth_name": "高雄莒光市場"
   }
 ]
