@@ -163,5 +163,20 @@
       "accuracy": 18.840999603271484,
       "timestamp": "2025-11-11T12:15:19.003Z"
     }
+  },
+  {
+    "vendor_id": "北三",
+    "vendor_name": "北三",
+    "vendor_category": "餅乾",
+    "booth_location": "桃園龜山",
+    "booth_name": "桃園龜山",
+    "date": "2025-11-12",
+    "submitted_at": "2025-11-11T12:23:07.474Z",
+    "gps_location": {
+      "latitude": 24.8988925,
+      "longitude": 121.1617481,
+      "accuracy": 45.599998474121094,
+      "timestamp": "2025-11-11T12:23:06.196Z"
+    }
   }
 ]
