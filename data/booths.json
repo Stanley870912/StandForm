@@ -130,5 +130,9 @@
   {
     "booth_location": "桃園南門",
     "booth_name": "桃園南門"
+  },
+  {
+    "booth_location": "桃園大溪",
+    "booth_name": "桃園大溪"
   }
 ]

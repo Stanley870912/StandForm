@@ -409,5 +409,20 @@
       "accuracy": 100,
       "timestamp": "2025-11-11T12:36:36.897Z"
     }
+  },
+  {
+    "vendor_id": "北十",
+    "vendor_name": "北十",
+    "vendor_category": "糖果",
+    "booth_location": "桃園大溪",
+    "booth_name": "桃園大溪",
+    "date": "2025-11-12",
+    "submitted_at": "2025-11-11T12:47:04.616Z",
+    "gps_location": {
+      "latitude": 24.899004,
+      "longitude": 121.161625,
+      "accuracy": 25,
+      "timestamp": "2025-11-11T12:47:02.789Z"
+    }
   }
 ]
