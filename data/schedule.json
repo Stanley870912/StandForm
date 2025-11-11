@@ -629,5 +629,20 @@
       "accuracy": 187,
       "timestamp": "2025-11-11T13:39:06.040Z"
     }
+  },
+  {
+    "vendor_id": "南五",
+    "vendor_name": "南五",
+    "vendor_category": "餅乾",
+    "booth_location": "高雄莒光市場",
+    "booth_name": "高雄莒光市場",
+    "date": "2025-11-16",
+    "submitted_at": "2025-11-11T13:39:39.226Z",
+    "gps_location": {
+      "latitude": 23.059914,
+      "longitude": 120.293282,
+      "accuracy": 212,
+      "timestamp": "2025-11-11T13:39:38.945Z"
+    }
   }
 ]
