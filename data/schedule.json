@@ -183,8 +183,8 @@
     "vendor_id": "北五",
     "vendor_name": "北五",
     "vendor_category": "餅乾",
-    "booth_location": "台北國泰市場",
-    "booth_name": "台北國泰市場",
+    "booth_location": "板橋國泰市場",
+    "booth_name": "板橋國泰市場",
     "date": "2025-11-16",
     "submitted_at": "2025-11-11T12:23:31.363Z",
     "gps_location": {
@@ -192,6 +192,7 @@
       "longitude": 121.53034290567467,
       "accuracy": 13.99270155258791,
       "timestamp": "2025-11-11T12:23:28.452Z"
-    }
+    },
+    "updated_at": "2025-11-11T12:25:00.482Z"
   }
 ]
