@@ -459,5 +459,20 @@
       "accuracy": 100,
       "timestamp": "2025-11-11T12:52:39.696Z"
     }
+  },
+  {
+    "vendor_id": "北六",
+    "vendor_name": "北六",
+    "vendor_category": "餅乾",
+    "booth_location": "台北士林華榮市場",
+    "booth_name": "台北士林華榮市場",
+    "date": "2025-11-19",
+    "submitted_at": "2025-11-11T12:53:29.103Z",
+    "gps_location": {
+      "latitude": 24.9839093,
+      "longitude": 121.4483671,
+      "accuracy": 100,
+      "timestamp": "2025-11-11T12:53:27.265Z"
+    }
   }
 ]
