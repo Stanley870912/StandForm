@@ -209,5 +209,20 @@
       "accuracy": 33.98094824912456,
       "timestamp": "2025-11-11T12:27:46.247Z"
     }
+  },
+  {
+    "vendor_id": "北一",
+    "vendor_name": "北一",
+    "vendor_category": "餅乾",
+    "booth_location": "新竹竹蓮市場",
+    "booth_name": "新竹竹蓮市場",
+    "date": "2025-11-18",
+    "submitted_at": "2025-11-11T12:28:02.199Z",
+    "gps_location": {
+      "latitude": 24.888906,
+      "longitude": 121.1700548,
+      "accuracy": 13.470999717712402,
+      "timestamp": "2025-11-11T12:28:01.116Z"
+    }
   }
 ]
