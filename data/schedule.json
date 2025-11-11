@@ -194,5 +194,20 @@
       "timestamp": "2025-11-11T12:23:28.452Z"
     },
     "updated_at": "2025-11-11T12:25:00.482Z"
+  },
+  {
+    "vendor_id": "北九",
+    "vendor_name": "北九",
+    "vendor_category": "糖果",
+    "booth_location": "台北虎林街市場",
+    "booth_name": "台北虎林街市場",
+    "date": "2025-11-19",
+    "submitted_at": "2025-11-11T12:27:46.904Z",
+    "gps_location": {
+      "latitude": 24.970859527923935,
+      "longitude": 121.33492998756583,
+      "accuracy": 33.98094824912456,
+      "timestamp": "2025-11-11T12:27:46.247Z"
+    }
   }
 ]
