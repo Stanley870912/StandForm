@@ -654,5 +654,15 @@
     "date": "2025-11-22",
     "submitted_at": "2025-11-11T18:27:22.269Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "甯",
+    "vendor_name": "甯",
+    "vendor_category": "糖果",
+    "booth_location": "雲林四湖",
+    "booth_name": "雲林四湖",
+    "date": "2025-11-23",
+    "submitted_at": "2025-11-11T18:29:33.760Z",
+    "gps_location": null
   }
 ]
