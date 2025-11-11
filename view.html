@@ -293,23 +293,24 @@
                 const response = await fetch('data/schedule.json');
                 allSchedules = await response.json();
                 
-                // 計算一個月前的日期
-                const oneMonthAgo = new Date();
-                oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+                // 計算今天的日期（不含時間）
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
                 
-                // 只保留一個月內的資料
+                // 只保留今天之後的資料（包含今天）
                 allSchedules = allSchedules.filter(schedule => {
                     const scheduleDate = new Date(schedule.date);
-                    return scheduleDate >= oneMonthAgo;
+                    scheduleDate.setHours(0, 0, 0, 0);
+                    return scheduleDate >= today;
                 });
                 
                 filteredSchedules = [...allSchedules];
                 
-                // 按日期降序排序（最新的在前）
+                // 按日期升序排序（最早的在前）
                 filteredSchedules.sort((a, b) => {
-                    const dateCompare = new Date(b.date) - new Date(a.date);
+                    const dateCompare = new Date(a.date) - new Date(b.date);
                     if (dateCompare !== 0) return dateCompare;
-                    return new Date(b.submitted_at) - new Date(a.submitted_at);
+                    return new Date(a.submitted_at) - new Date(b.submitted_at);
                 });
                 
                 updateDisplay();
@@ -377,11 +378,11 @@
                 return true;
             });
 
-            // 排序
+            // 排序（按日期升序，最早的在前）
             filteredSchedules.sort((a, b) => {
-                const dateCompare = new Date(b.date) - new Date(a.date);
+                const dateCompare = new Date(a.date) - new Date(b.date);
                 if (dateCompare !== 0) return dateCompare;
-                return new Date(b.submitted_at) - new Date(a.submitted_at);
+                return new Date(a.submitted_at) - new Date(b.submitted_at);
             });
 
             updateDisplay();
@@ -396,9 +397,9 @@
             
             filteredSchedules = [...allSchedules];
             filteredSchedules.sort((a, b) => {
-                const dateCompare = new Date(b.date) - new Date(a.date);
+                const dateCompare = new Date(a.date) - new Date(b.date);
                 if (dateCompare !== 0) return dateCompare;
-                return new Date(b.submitted_at) - new Date(a.submitted_at);
+                return new Date(a.submitted_at) - new Date(b.submitted_at);
             });
             
             updateDisplay();
