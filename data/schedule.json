@@ -519,5 +519,15 @@
       "accuracy": 100,
       "timestamp": "2025-11-11T13:05:36.028Z"
     }
+  },
+  {
+    "vendor_id": "南六",
+    "vendor_name": "南六",
+    "vendor_category": "餅乾",
+    "booth_location": "台南六甲市場",
+    "booth_name": "台南六甲市場",
+    "date": "2025-11-14",
+    "submitted_at": "2025-11-11T13:07:52.396Z",
+    "gps_location": null
   }
 ]
