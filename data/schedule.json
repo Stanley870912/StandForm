@@ -529,5 +529,20 @@
     "date": "2025-11-14",
     "submitted_at": "2025-11-11T13:07:52.396Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "北一",
+    "vendor_name": "北一",
+    "vendor_category": "餅乾",
+    "booth_location": "新北永和溪州",
+    "booth_name": "新北永和溪州",
+    "date": "2025-11-22",
+    "submitted_at": "2025-11-11T13:30:38.491Z",
+    "gps_location": {
+      "latitude": 24.8889099,
+      "longitude": 121.1700548,
+      "accuracy": 100,
+      "timestamp": "2025-11-11T13:30:36.910Z"
+    }
   }
 ]
