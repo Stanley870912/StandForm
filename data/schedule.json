@@ -364,5 +364,20 @@
       "accuracy": 100,
       "timestamp": "2025-11-11T12:34:07.388Z"
     }
+  },
+  {
+    "vendor_id": "北四",
+    "vendor_name": "北四",
+    "vendor_category": "糖果",
+    "booth_location": "台北虎林",
+    "booth_name": "台北虎林",
+    "date": "2025-11-25",
+    "submitted_at": "2025-11-11T12:35:29.952Z",
+    "gps_location": {
+      "latitude": 24.958199760899838,
+      "longitude": 121.2376577128854,
+      "accuracy": 18.84739665697025,
+      "timestamp": "2025-11-11T12:35:29.582Z"
+    }
   }
 ]
