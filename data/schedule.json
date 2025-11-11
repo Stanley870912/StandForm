@@ -589,5 +589,15 @@
       "accuracy": 100,
       "timestamp": "2025-11-11T13:32:15.764Z"
     }
+  },
+  {
+    "vendor_id": "北一",
+    "vendor_name": "北一",
+    "vendor_category": "餅乾",
+    "booth_location": "新北中和南勢角",
+    "booth_name": "新北中和南勢角",
+    "date": "2025-11-23",
+    "submitted_at": "2025-11-11T13:34:35.210Z",
+    "gps_location": null
   }
 ]
