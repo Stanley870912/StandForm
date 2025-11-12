@@ -1174,5 +1174,20 @@
       "accuracy": 11.741000175476074,
       "timestamp": "2025-11-12T23:30:11.963Z"
     }
+  },
+  {
+    "vendor_id": "阿證",
+    "vendor_name": "阿證",
+    "vendor_category": "糕餅",
+    "booth_location": "彰化和美",
+    "booth_name": "彰化和美",
+    "date": "2025-11-20",
+    "submitted_at": "2025-11-12T23:30:38.810Z",
+    "gps_location": {
+      "latitude": 24.1108788,
+      "longitude": 120.4979043,
+      "accuracy": 11.428999900817871,
+      "timestamp": "2025-11-12T23:30:36.599Z"
+    }
   }
 ]
