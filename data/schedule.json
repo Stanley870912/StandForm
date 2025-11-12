@@ -829,5 +829,15 @@
       "accuracy": 2000,
       "timestamp": "2025-11-12T03:36:26.699Z"
     }
+  },
+  {
+    "vendor_id": "北二",
+    "vendor_name": "北二",
+    "vendor_category": "糖果",
+    "booth_location": "新竹湖口",
+    "booth_name": "新竹湖口",
+    "date": "2025-11-14",
+    "submitted_at": "2025-11-12T04:15:56.026Z",
+    "gps_location": null
   }
 ]
