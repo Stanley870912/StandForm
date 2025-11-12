@@ -1159,5 +1159,20 @@
       "accuracy": 11.423999786376953,
       "timestamp": "2025-11-12T23:29:41.481Z"
     }
+  },
+  {
+    "vendor_id": "阿證",
+    "vendor_name": "阿證",
+    "vendor_category": "糕餅",
+    "booth_location": "台中大肚",
+    "booth_name": "台中大肚",
+    "date": "2025-11-19",
+    "submitted_at": "2025-11-12T23:30:13.798Z",
+    "gps_location": {
+      "latitude": 24.1108824,
+      "longitude": 120.4978926,
+      "accuracy": 11.741000175476074,
+      "timestamp": "2025-11-12T23:30:11.963Z"
+    }
   }
 ]
