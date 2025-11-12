@@ -929,5 +929,20 @@
     "date": "2025-11-15",
     "submitted_at": "2025-11-12T11:55:53.574Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "北九",
+    "vendor_name": "北九",
+    "vendor_category": "糖果",
+    "booth_location": "桃園內壢市場",
+    "booth_name": "桃園內壢市場",
+    "date": "2025-11-13",
+    "submitted_at": "2025-11-12T12:00:49.643Z",
+    "gps_location": {
+      "latitude": 24.970771172086515,
+      "longitude": 121.3348428320081,
+      "accuracy": 32.695014,
+      "timestamp": "2025-11-12T12:00:49.137Z"
+    }
   }
 ]
