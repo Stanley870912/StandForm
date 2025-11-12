@@ -758,7 +758,7 @@
   {
     "vendor_id": "北二",
     "vendor_name": "北二",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "桃園新明",
     "booth_name": "桃園新明",
     "date": "2025-12-01",
@@ -773,7 +773,7 @@
   {
     "vendor_id": "北二",
     "vendor_name": "北二",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "桃園新明",
     "booth_name": "桃園新明",
     "date": "2025-12-15",
@@ -788,7 +788,7 @@
   {
     "vendor_id": "北二",
     "vendor_name": "北二",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "桃園新明",
     "booth_name": "桃園新明",
     "date": "2025-12-29",
@@ -803,7 +803,7 @@
   {
     "vendor_id": "北十",
     "vendor_name": "北十",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "桃園新明",
     "booth_name": "桃園新明",
     "date": "2025-12-12",
@@ -818,7 +818,7 @@
   {
     "vendor_id": "北十",
     "vendor_name": "北十",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "桃園新明",
     "booth_name": "桃園新明",
     "date": "2025-12-26",
@@ -833,7 +833,7 @@
   {
     "vendor_id": "北二",
     "vendor_name": "北二",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "新竹湖口",
     "booth_name": "新竹湖口",
     "date": "2025-11-14",
@@ -843,7 +843,7 @@
   {
     "vendor_id": "甯",
     "vendor_name": "甯",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "苗栗苑裡",
     "booth_name": "苗栗苑裡",
     "date": "2025-11-15",
@@ -853,7 +853,7 @@
   {
     "vendor_id": "翊鴻",
     "vendor_name": "翊鴻",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台中市水湳",
     "booth_name": "台中市水湳",
     "date": "2025-11-13",
@@ -868,7 +868,7 @@
   {
     "vendor_id": "翊鴻",
     "vendor_name": "翊鴻",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台中大肚自強",
     "booth_name": "台中大肚自強",
     "date": "2025-11-14",
@@ -883,7 +883,7 @@
   {
     "vendor_id": "翊鴻",
     "vendor_name": "翊鴻",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台中大里內新",
     "booth_name": "台中大里內新",
     "date": "2025-11-15",
@@ -898,7 +898,7 @@
   {
     "vendor_id": "北五",
     "vendor_name": "北五",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台北吳興街",
     "booth_name": "台北吳興街",
     "date": "2025-11-13",
@@ -913,7 +913,7 @@
   {
     "vendor_id": "南六",
     "vendor_name": "南六",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台南歸仁市場",
     "booth_name": "台南歸仁市場",
     "date": "2025-11-13",
@@ -923,7 +923,7 @@
   {
     "vendor_id": "南六",
     "vendor_name": "南六",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台南善化市場",
     "booth_name": "台南善化市場",
     "date": "2025-11-15",
@@ -933,7 +933,7 @@
   {
     "vendor_id": "北九",
     "vendor_name": "北九",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "桃園內壢市場",
     "booth_name": "桃園內壢市場",
     "date": "2025-11-13",
@@ -948,7 +948,7 @@
   {
     "vendor_id": "小愛",
     "vendor_name": "小愛",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "雲林虎尾",
     "booth_name": "雲林虎尾",
     "date": "2025-11-12",
@@ -958,7 +958,7 @@
   {
     "vendor_id": "小愛",
     "vendor_name": "小愛",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "雲林虎尾",
     "booth_name": "雲林虎尾",
     "date": "2025-11-13",
@@ -968,7 +968,7 @@
   {
     "vendor_id": "小愛",
     "vendor_name": "小愛",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "台中霧峰",
     "booth_name": "台中霧峰",
     "date": "2025-11-14",
@@ -978,7 +978,7 @@
   {
     "vendor_id": "小愛",
     "vendor_name": "小愛",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "南投埔裡",
     "booth_name": "南投埔裡",
     "date": "2025-11-15",
@@ -988,7 +988,7 @@
   {
     "vendor_id": "小愛",
     "vendor_name": "小愛",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "南投晚市",
     "booth_name": "南投晚市",
     "date": "2025-11-16",
@@ -998,7 +998,7 @@
   {
     "vendor_id": "小愛",
     "vendor_name": "小愛",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "台中豐原",
     "booth_name": "台中豐原",
     "date": "2025-11-17",
@@ -1008,7 +1008,7 @@
   {
     "vendor_id": "小愛",
     "vendor_name": "小愛",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "雲林鬥六",
     "booth_name": "雲林鬥六",
     "date": "2025-11-19",
@@ -1018,7 +1018,7 @@
   {
     "vendor_id": "小愛",
     "vendor_name": "小愛",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "彰化北鬥",
     "booth_name": "彰化北鬥",
     "date": "2025-11-20",
