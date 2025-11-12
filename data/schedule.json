@@ -1004,5 +1004,15 @@
     "date": "2025-11-17",
     "submitted_at": "2025-11-12T12:59:15.729Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "雲林鬥六",
+    "booth_name": "雲林鬥六",
+    "date": "2025-11-19",
+    "submitted_at": "2025-11-12T12:59:43.556Z",
+    "gps_location": null
   }
 ]
