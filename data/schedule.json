@@ -879,5 +879,20 @@
       "accuracy": 42.5,
       "timestamp": "2025-11-12T07:39:29.087Z"
     }
+  },
+  {
+    "vendor_id": "翊鴻",
+    "vendor_name": "翊鴻",
+    "vendor_category": "餅乾",
+    "booth_location": "台中大里內新",
+    "booth_name": "台中大里內新",
+    "date": "2025-11-15",
+    "submitted_at": "2025-11-12T07:39:51.207Z",
+    "gps_location": {
+      "latitude": 24.1489242,
+      "longitude": 120.7060012,
+      "accuracy": 18.03700065612793,
+      "timestamp": "2025-11-12T07:39:49.855Z"
+    }
   }
 ]
