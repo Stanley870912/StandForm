@@ -1119,5 +1119,20 @@
     "date": "2025-11-15",
     "submitted_at": "2025-11-12T23:26:16.519Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "阿證",
+    "vendor_name": "阿證",
+    "vendor_category": "糕餅",
+    "booth_location": "彰化埤頭",
+    "booth_name": "彰化埤頭",
+    "date": "2025-11-16",
+    "submitted_at": "2025-11-12T23:28:20.079Z",
+    "gps_location": {
+      "latitude": 24.1108844,
+      "longitude": 120.4978763,
+      "accuracy": 11.593000411987305,
+      "timestamp": "2025-11-12T23:28:18.698Z"
+    }
   }
 ]
