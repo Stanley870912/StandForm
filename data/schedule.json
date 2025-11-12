@@ -1054,5 +1054,20 @@
       "accuracy": 100,
       "timestamp": "2025-11-12T13:33:11.168Z"
     }
+  },
+  {
+    "vendor_id": "北八",
+    "vendor_name": "北八",
+    "vendor_category": "零食",
+    "booth_location": "桃園中壢興國市場",
+    "booth_name": "桃園中壢興國市場",
+    "date": "2025-11-13",
+    "submitted_at": "2025-11-12T13:39:52.416Z",
+    "gps_location": {
+      "latitude": 24.958258092365785,
+      "longitude": 121.2375963931521,
+      "accuracy": 28.5786226998981,
+      "timestamp": "2025-11-12T13:39:52.015Z"
+    }
   }
 ]
