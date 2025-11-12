@@ -754,5 +754,275 @@
       "accuracy": 25,
       "timestamp": "2025-11-12T02:22:26.539Z"
     }
+  },
+  {
+    "vendor_id": "北二",
+    "vendor_name": "北二",
+    "vendor_category": "糖果",
+    "booth_location": "桃園新明",
+    "booth_name": "桃園新明",
+    "date": "2025-12-01",
+    "submitted_at": "2025-11-12T03:29:36.852Z",
+    "gps_location": {
+      "latitude": 24.9009009009009,
+      "longitude": 121.15475351468807,
+      "accuracy": 2000,
+      "timestamp": "2025-11-12T03:29:34.703Z"
+    }
+  },
+  {
+    "vendor_id": "北二",
+    "vendor_name": "北二",
+    "vendor_category": "糖果",
+    "booth_location": "桃園新明",
+    "booth_name": "桃園新明",
+    "date": "2025-12-15",
+    "submitted_at": "2025-11-12T03:30:27.312Z",
+    "gps_location": {
+      "latitude": 24.9009009009009,
+      "longitude": 121.15475351468807,
+      "accuracy": 2000,
+      "timestamp": "2025-11-12T03:30:25.382Z"
+    }
+  },
+  {
+    "vendor_id": "北二",
+    "vendor_name": "北二",
+    "vendor_category": "糖果",
+    "booth_location": "桃園新明",
+    "booth_name": "桃園新明",
+    "date": "2025-12-29",
+    "submitted_at": "2025-11-12T03:30:56.438Z",
+    "gps_location": {
+      "latitude": 24.9009009009009,
+      "longitude": 121.15475351468807,
+      "accuracy": 2000,
+      "timestamp": "2025-11-12T03:30:54.847Z"
+    }
+  },
+  {
+    "vendor_id": "北十",
+    "vendor_name": "北十",
+    "vendor_category": "糖果",
+    "booth_location": "桃園新明",
+    "booth_name": "桃園新明",
+    "date": "2025-12-12",
+    "submitted_at": "2025-11-12T03:35:50.670Z",
+    "gps_location": {
+      "latitude": 24.9009009009009,
+      "longitude": 121.15475351468807,
+      "accuracy": 2000,
+      "timestamp": "2025-11-12T03:35:48.754Z"
+    }
+  },
+  {
+    "vendor_id": "北十",
+    "vendor_name": "北十",
+    "vendor_category": "糖果",
+    "booth_location": "桃園新明",
+    "booth_name": "桃園新明",
+    "date": "2025-12-26",
+    "submitted_at": "2025-11-12T03:36:28.764Z",
+    "gps_location": {
+      "latitude": 24.9009009009009,
+      "longitude": 121.15475351468807,
+      "accuracy": 2000,
+      "timestamp": "2025-11-12T03:36:26.699Z"
+    }
+  },
+  {
+    "vendor_id": "北二",
+    "vendor_name": "北二",
+    "vendor_category": "糖果",
+    "booth_location": "新竹湖口",
+    "booth_name": "新竹湖口",
+    "date": "2025-11-14",
+    "submitted_at": "2025-11-12T04:15:56.026Z",
+    "gps_location": null
+  },
+  {
+    "vendor_id": "甯",
+    "vendor_name": "甯",
+    "vendor_category": "糖果",
+    "booth_location": "苗栗苑裡",
+    "booth_name": "苗栗苑裡",
+    "date": "2025-11-15",
+    "submitted_at": "2025-11-12T06:32:58.741Z",
+    "gps_location": null
+  },
+  {
+    "vendor_id": "翊鴻",
+    "vendor_name": "翊鴻",
+    "vendor_category": "餅乾",
+    "booth_location": "台中市水湳",
+    "booth_name": "台中市水湳",
+    "date": "2025-11-13",
+    "submitted_at": "2025-11-12T07:38:57.440Z",
+    "gps_location": {
+      "latitude": 24.1489285,
+      "longitude": 120.7060085,
+      "accuracy": 17.148000717163086,
+      "timestamp": "2025-11-12T07:38:56.442Z"
+    }
+  },
+  {
+    "vendor_id": "翊鴻",
+    "vendor_name": "翊鴻",
+    "vendor_category": "餅乾",
+    "booth_location": "台中大肚自強",
+    "booth_name": "台中大肚自強",
+    "date": "2025-11-14",
+    "submitted_at": "2025-11-12T07:39:30.528Z",
+    "gps_location": {
+      "latitude": 24.1489264,
+      "longitude": 120.7060103,
+      "accuracy": 42.5,
+      "timestamp": "2025-11-12T07:39:29.087Z"
+    }
+  },
+  {
+    "vendor_id": "翊鴻",
+    "vendor_name": "翊鴻",
+    "vendor_category": "餅乾",
+    "booth_location": "台中大里內新",
+    "booth_name": "台中大里內新",
+    "date": "2025-11-15",
+    "submitted_at": "2025-11-12T07:39:51.207Z",
+    "gps_location": {
+      "latitude": 24.1489242,
+      "longitude": 120.7060012,
+      "accuracy": 18.03700065612793,
+      "timestamp": "2025-11-12T07:39:49.855Z"
+    }
+  },
+  {
+    "vendor_id": "北五",
+    "vendor_name": "北五",
+    "vendor_category": "餅乾",
+    "booth_location": "台北吳興街",
+    "booth_name": "台北吳興街",
+    "date": "2025-11-13",
+    "submitted_at": "2025-11-12T10:48:42.822Z",
+    "gps_location": {
+      "latitude": 25.0445824,
+      "longitude": 121.2153856,
+      "accuracy": 15789.348583757988,
+      "timestamp": "2025-11-12T10:48:42.992Z"
+    }
+  },
+  {
+    "vendor_id": "南六",
+    "vendor_name": "南六",
+    "vendor_category": "餅乾",
+    "booth_location": "台南歸仁市場",
+    "booth_name": "台南歸仁市場",
+    "date": "2025-11-13",
+    "submitted_at": "2025-11-12T11:55:35.654Z",
+    "gps_location": null
+  },
+  {
+    "vendor_id": "南六",
+    "vendor_name": "南六",
+    "vendor_category": "餅乾",
+    "booth_location": "台南善化市場",
+    "booth_name": "台南善化市場",
+    "date": "2025-11-15",
+    "submitted_at": "2025-11-12T11:55:53.574Z",
+    "gps_location": null
+  },
+  {
+    "vendor_id": "北九",
+    "vendor_name": "北九",
+    "vendor_category": "糖果",
+    "booth_location": "桃園內壢市場",
+    "booth_name": "桃園內壢市場",
+    "date": "2025-11-13",
+    "submitted_at": "2025-11-12T12:00:49.643Z",
+    "gps_location": {
+      "latitude": 24.970771172086515,
+      "longitude": 121.3348428320081,
+      "accuracy": 32.695014,
+      "timestamp": "2025-11-12T12:00:49.137Z"
+    }
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "雲林虎尾",
+    "booth_name": "雲林虎尾",
+    "date": "2025-11-12",
+    "submitted_at": "2025-11-12T12:56:40.518Z",
+    "gps_location": null
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "雲林虎尾",
+    "booth_name": "雲林虎尾",
+    "date": "2025-11-13",
+    "submitted_at": "2025-11-12T12:57:11.840Z",
+    "gps_location": null
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "台中霧峰",
+    "booth_name": "台中霧峰",
+    "date": "2025-11-14",
+    "submitted_at": "2025-11-12T12:57:48.846Z",
+    "gps_location": null
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "南投埔裡",
+    "booth_name": "南投埔裡",
+    "date": "2025-11-15",
+    "submitted_at": "2025-11-12T12:58:26.373Z",
+    "gps_location": null
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "南投晚市",
+    "booth_name": "南投晚市",
+    "date": "2025-11-16",
+    "submitted_at": "2025-11-12T12:58:52.393Z",
+    "gps_location": null
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "台中豐原",
+    "booth_name": "台中豐原",
+    "date": "2025-11-17",
+    "submitted_at": "2025-11-12T12:59:15.729Z",
+    "gps_location": null
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "雲林鬥六",
+    "booth_name": "雲林鬥六",
+    "date": "2025-11-19",
+    "submitted_at": "2025-11-12T12:59:43.556Z",
+    "gps_location": null
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "彰化北鬥",
+    "booth_name": "彰化北鬥",
+    "date": "2025-11-20",
+    "submitted_at": "2025-11-12T13:00:11.427Z",
+    "gps_location": null
   }
 ]
