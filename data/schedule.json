@@ -974,5 +974,15 @@
     "date": "2025-11-14",
     "submitted_at": "2025-11-12T12:57:48.846Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "南投埔裡",
+    "booth_name": "南投埔裡",
+    "date": "2025-11-15",
+    "submitted_at": "2025-11-12T12:58:26.373Z",
+    "gps_location": null
   }
 ]
