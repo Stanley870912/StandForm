@@ -1039,5 +1039,20 @@
       "accuracy": 28.5786226998981,
       "timestamp": "2025-11-12T13:22:19.103Z"
     }
+  },
+  {
+    "vendor_id": "北一",
+    "vendor_name": "北一",
+    "vendor_category": "糕餅",
+    "booth_location": "新北埔墘市場",
+    "booth_name": "新北埔墘市場",
+    "date": "2025-11-13",
+    "submitted_at": "2025-11-12T13:33:12.864Z",
+    "gps_location": {
+      "latitude": 24.9090654,
+      "longitude": 121.1583312,
+      "accuracy": 100,
+      "timestamp": "2025-11-12T13:33:11.168Z"
+    }
   }
 ]
