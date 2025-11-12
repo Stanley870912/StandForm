@@ -2,7 +2,7 @@
   {
     "vendor_id": "南一",
     "vendor_name": "南一",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "台南新營",
     "booth_name": "台南新營",
     "date": "2025-11-10",
@@ -17,7 +17,7 @@
   {
     "vendor_id": "南一",
     "vendor_name": "南一",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "高雄國民市場",
     "booth_name": "高雄國民市場",
     "date": "2025-11-11",
@@ -32,7 +32,7 @@
   {
     "vendor_id": "南一",
     "vendor_name": "南一",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "高雄果貿市場",
     "booth_name": "高雄果貿市場",
     "date": "2025-11-12",
@@ -42,7 +42,7 @@
   {
     "vendor_id": "南一",
     "vendor_name": "南一",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "屏東東港市場",
     "booth_name": "屏東東港市場",
     "date": "2025-11-13",
@@ -57,7 +57,7 @@
   {
     "vendor_id": "南一",
     "vendor_name": "南一",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "台南果菜市場",
     "booth_name": "台南果菜市場",
     "date": "2025-11-14",
@@ -72,7 +72,7 @@
   {
     "vendor_id": "南一",
     "vendor_name": "南一",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "高雄五甲國宅市場",
     "booth_name": "高雄五甲國宅市場",
     "date": "2025-11-15",
@@ -87,7 +87,7 @@
   {
     "vendor_id": "南一",
     "vendor_name": "南一",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "高雄金獅湖市場",
     "booth_name": "高雄金獅湖市場",
     "date": "2025-11-16",
@@ -97,7 +97,7 @@
   {
     "vendor_id": "南一",
     "vendor_name": "南一",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "台南新營",
     "booth_name": "台南新營",
     "date": "2025-11-17",
@@ -112,7 +112,7 @@
   {
     "vendor_id": "南一",
     "vendor_name": "南一",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "高雄三和市場",
     "booth_name": "高雄三和市場",
     "date": "2025-11-18",
@@ -122,7 +122,7 @@
   {
     "vendor_id": "南一",
     "vendor_name": "南一",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "高雄岡山市場",
     "booth_name": "高雄岡山市場",
     "date": "2025-11-19",
@@ -137,7 +137,7 @@
   {
     "vendor_id": "南二",
     "vendor_name": "南二",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台南崇德市場",
     "booth_name": "台南崇德市場",
     "date": "2025-11-11",
@@ -152,7 +152,7 @@
   {
     "vendor_id": "南二",
     "vendor_name": "南二",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台南果菜市場",
     "booth_name": "台南果菜市場",
     "date": "2025-11-12",
@@ -167,7 +167,7 @@
   {
     "vendor_id": "北三",
     "vendor_name": "北三",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "桃園龜山",
     "booth_name": "桃園龜山",
     "date": "2025-11-12",
@@ -182,7 +182,7 @@
   {
     "vendor_id": "北五",
     "vendor_name": "北五",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "板橋國泰市場",
     "booth_name": "板橋國泰市場",
     "date": "2025-11-16",
@@ -198,7 +198,7 @@
   {
     "vendor_id": "北九",
     "vendor_name": "北九",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "台北虎林街市場",
     "booth_name": "台北虎林街市場",
     "date": "2025-11-19",
@@ -213,7 +213,7 @@
   {
     "vendor_id": "北一",
     "vendor_name": "北一",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "新竹竹蓮市場",
     "booth_name": "新竹竹蓮市場",
     "date": "2025-11-18",
@@ -228,7 +228,7 @@
   {
     "vendor_id": "南二",
     "vendor_name": "南二",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台南金華市場",
     "booth_name": "台南金華市場",
     "date": "2025-11-16",
@@ -243,7 +243,7 @@
   {
     "vendor_id": "南二",
     "vendor_name": "南二",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "高雄茄萣市場",
     "booth_name": "高雄茄萣市場",
     "date": "2025-11-18",
@@ -258,7 +258,7 @@
   {
     "vendor_id": "南二",
     "vendor_name": "南二",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台南水仙宮市場",
     "booth_name": "台南水仙宮市場",
     "date": "2025-11-20",
@@ -273,7 +273,7 @@
   {
     "vendor_id": "南二",
     "vendor_name": "南二",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台南崇德市場",
     "booth_name": "台南崇德市場",
     "date": "2025-11-21",
@@ -288,7 +288,7 @@
   {
     "vendor_id": "南二",
     "vendor_name": "南二",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台南新營",
     "booth_name": "台南新營",
     "date": "2025-11-22",
@@ -303,7 +303,7 @@
   {
     "vendor_id": "南二",
     "vendor_name": "南二",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台南佳里市場",
     "booth_name": "台南佳里市場",
     "date": "2025-11-23",
@@ -318,7 +318,7 @@
   {
     "vendor_id": "北一",
     "vendor_name": "北一",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "新北永和溪州",
     "booth_name": "新北永和溪州",
     "date": "2025-11-15",
@@ -333,7 +333,7 @@
   {
     "vendor_id": "北二",
     "vendor_name": "北二",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "桃園新明",
     "booth_name": "桃園新明",
     "date": "2025-11-17",
@@ -343,7 +343,7 @@
   {
     "vendor_id": "北十",
     "vendor_name": "北十",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "桃園新民",
     "booth_name": "桃園新民",
     "date": "2025-11-14",
@@ -353,7 +353,7 @@
   {
     "vendor_id": "北一",
     "vendor_name": "北一",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "新北三重力行市場",
     "booth_name": "新北三重力行市場",
     "date": "2025-11-17",
@@ -368,7 +368,7 @@
   {
     "vendor_id": "北四",
     "vendor_name": "北四",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "台北虎林",
     "booth_name": "台北虎林",
     "date": "2025-11-25",
@@ -383,7 +383,7 @@
   {
     "vendor_id": "北四",
     "vendor_name": "北四",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "桃園南門",
     "booth_name": "桃園南門",
     "date": "2025-11-20",
@@ -398,7 +398,7 @@
   {
     "vendor_id": "小蝦米",
     "vendor_name": "小蝦米",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "台中大甲",
     "booth_name": "台中大甲",
     "date": "2025-11-15",
@@ -413,7 +413,7 @@
   {
     "vendor_id": "北十",
     "vendor_name": "北十",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "桃園大溪",
     "booth_name": "桃園大溪",
     "date": "2025-11-12",
@@ -428,7 +428,7 @@
   {
     "vendor_id": "北六",
     "vendor_name": "北六",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "桃園南門市場",
     "booth_name": "桃園南門市場",
     "date": "2025-11-17",
@@ -438,7 +438,7 @@
   {
     "vendor_id": "北六",
     "vendor_name": "北六",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台北雙連市場",
     "booth_name": "台北雙連市場",
     "date": "2025-11-13",
@@ -448,7 +448,7 @@
   {
     "vendor_id": "北六",
     "vendor_name": "北六",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台北東門市場",
     "booth_name": "台北東門市場",
     "date": "2025-11-14",
@@ -463,7 +463,7 @@
   {
     "vendor_id": "北六",
     "vendor_name": "北六",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台北士林華榮市場",
     "booth_name": "台北士林華榮市場",
     "date": "2025-11-19",
@@ -478,7 +478,7 @@
   {
     "vendor_id": "北五",
     "vendor_name": "北五",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台北天公廟",
     "booth_name": "台北天公廟",
     "date": "2025-11-21",
@@ -493,7 +493,7 @@
   {
     "vendor_id": "北五",
     "vendor_name": "北五",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "新北裕民",
     "booth_name": "新北裕民",
     "date": "2025-11-22",
@@ -508,7 +508,7 @@
   {
     "vendor_id": "北一",
     "vendor_name": "北一",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "新北市板橋",
     "booth_name": "新北市板橋",
     "date": "2025-11-11",
@@ -523,7 +523,7 @@
   {
     "vendor_id": "南六",
     "vendor_name": "南六",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台南六甲市場",
     "booth_name": "台南六甲市場",
     "date": "2025-11-14",
@@ -533,7 +533,7 @@
   {
     "vendor_id": "北一",
     "vendor_name": "北一",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "新北永和溪州",
     "booth_name": "新北永和溪州",
     "date": "2025-11-22",
@@ -548,7 +548,7 @@
   {
     "vendor_id": "北一",
     "vendor_name": "北一",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "新北三重力行市場",
     "booth_name": "新北三重力行市場",
     "date": "2025-11-24",
@@ -563,7 +563,7 @@
   {
     "vendor_id": "北一",
     "vendor_name": "北一",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "新竹竹蓮市場",
     "booth_name": "新竹竹蓮市場",
     "date": "2025-11-25",
@@ -578,7 +578,7 @@
   {
     "vendor_id": "北一",
     "vendor_name": "北一",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "新北永和溪州",
     "booth_name": "新北永和溪州",
     "date": "2025-11-29",
@@ -593,7 +593,7 @@
   {
     "vendor_id": "北一",
     "vendor_name": "北一",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "新北中和南勢角",
     "booth_name": "新北中和南勢角",
     "date": "2025-11-23",
@@ -603,7 +603,7 @@
   {
     "vendor_id": "南五",
     "vendor_name": "南五",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "高雄二苓市場",
     "booth_name": "高雄二苓市場",
     "date": "2025-11-13",
@@ -618,7 +618,7 @@
   {
     "vendor_id": "南五",
     "vendor_name": "南五",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "高雄莒光市場",
     "booth_name": "高雄莒光市場",
     "date": "2025-11-14",
@@ -633,7 +633,7 @@
   {
     "vendor_id": "南五",
     "vendor_name": "南五",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "高雄莒光市場",
     "booth_name": "高雄莒光市場",
     "date": "2025-11-16",
@@ -648,7 +648,7 @@
   {
     "vendor_id": "甯",
     "vendor_name": "甯",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "雲林虎尾",
     "booth_name": "雲林虎尾",
     "date": "2025-11-22",
@@ -658,7 +658,7 @@
   {
     "vendor_id": "甯",
     "vendor_name": "甯",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "雲林四湖",
     "booth_name": "雲林四湖",
     "date": "2025-11-23",
@@ -668,7 +668,7 @@
   {
     "vendor_id": "南三",
     "vendor_name": "南三",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "高雄工協市場",
     "booth_name": "高雄工協市場",
     "date": "2025-11-12",
@@ -683,7 +683,7 @@
   {
     "vendor_id": "甯",
     "vendor_name": "甯",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "雲林斗南",
     "booth_name": "雲林斗南",
     "date": "2025-11-20",
@@ -693,7 +693,7 @@
   {
     "vendor_id": "翊鴻",
     "vendor_name": "翊鴻",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "彰化三民市場",
     "booth_name": "彰化三民市場",
     "date": "2025-11-12",
@@ -708,7 +708,7 @@
   {
     "vendor_id": "南六",
     "vendor_name": "南六",
-    "vendor_category": "餅乾",
+    "vendor_category": "糕餅",
     "booth_location": "台南延平市場",
     "booth_name": "台南延平市場",
     "date": "2025-11-12",
@@ -723,7 +723,7 @@
   {
     "vendor_id": "甯",
     "vendor_name": "甯",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "南投晚市",
     "booth_name": "南投晚市",
     "date": "2025-11-12",
@@ -733,7 +733,7 @@
   {
     "vendor_id": "甯",
     "vendor_name": "甯",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "南投晚市",
     "booth_name": "南投晚市",
     "date": "2025-11-14",
@@ -743,7 +743,7 @@
   {
     "vendor_id": "北十",
     "vendor_name": "北十",
-    "vendor_category": "糖果",
+    "vendor_category": "零食",
     "booth_location": "桃園新民",
     "booth_name": "桃園新民",
     "date": "2025-11-28",

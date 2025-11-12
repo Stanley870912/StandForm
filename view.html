@@ -111,8 +111,8 @@
                             <label for="filterCategory" class="form-label">類別</label>
                             <select class="form-select" id="filterCategory">
                                 <option value="">全部類別</option>
-                                <option value="糖果">糖果</option>
-                                <option value="餅乾">餅乾</option>
+                                <option value="零食">零食</option>
+                                <option value="糕餅">糕餅</option>
                             </select>
                         </div>
                         <div class="col-md-3">
@@ -460,7 +460,7 @@
                     row.className = 'time-group-row';
                     
                     const categoryBadge = schedule.vendor_category ? 
-                        `<span class="badge ${schedule.vendor_category === '糖果' ? 'bg-info' : 'bg-warning'}">${schedule.vendor_category}</span>` : 
+                        `<span class="badge ${schedule.vendor_category === '零食' ? 'bg-info' : 'bg-warning'}">${schedule.vendor_category}</span>` : 
                         '<span class="badge bg-secondary">未分類</span>';
                     
                     row.innerHTML = `
