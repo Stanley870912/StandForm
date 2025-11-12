@@ -222,5 +222,9 @@
   {
     "booth_location": "台北吳興街",
     "booth_name": "台北吳興街"
+  },
+  {
+    "booth_location": "台南歸仁市場",
+    "booth_name": "台南歸仁市場"
   }
 ]
