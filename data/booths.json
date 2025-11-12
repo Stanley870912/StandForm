@@ -243,12 +243,8 @@
     "booth_location": "雲林斗六",
     "booth_name": "雲林斗六"
   },
-{
-  "booth_location": "彰化北斗",
-  "booth_name": "彰化北斗"
-},
-{
-  "booth_location": "新北宏泰市場",
-  "booth_name": "新北宏泰市場"
-}
+  {
+    "booth_location": "新北宏泰市場",
+    "booth_name": "新北宏泰市場"
+  }
 ]
