@@ -754,5 +754,20 @@
       "accuracy": 25,
       "timestamp": "2025-11-12T02:22:26.539Z"
     }
+  },
+  {
+    "vendor_id": "北二",
+    "vendor_name": "北二",
+    "vendor_category": "糖果",
+    "booth_location": "桃園新明",
+    "booth_name": "桃園新明",
+    "date": "2025-12-01",
+    "submitted_at": "2025-11-12T03:29:36.852Z",
+    "gps_location": {
+      "latitude": 24.9009009009009,
+      "longitude": 121.15475351468807,
+      "accuracy": 2000,
+      "timestamp": "2025-11-12T03:29:34.703Z"
+    }
   }
 ]
