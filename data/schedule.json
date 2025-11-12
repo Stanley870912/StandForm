@@ -944,5 +944,15 @@
       "accuracy": 32.695014,
       "timestamp": "2025-11-12T12:00:49.137Z"
     }
+  },
+  {
+    "vendor_id": "小愛",
+    "vendor_name": "小愛",
+    "vendor_category": "糖果",
+    "booth_location": "雲林虎尾",
+    "booth_name": "雲林虎尾",
+    "date": "2025-11-12",
+    "submitted_at": "2025-11-12T12:56:40.518Z",
+    "gps_location": null
   }
 ]
