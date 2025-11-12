@@ -894,5 +894,20 @@
       "accuracy": 18.03700065612793,
       "timestamp": "2025-11-12T07:39:49.855Z"
     }
+  },
+  {
+    "vendor_id": "北五",
+    "vendor_name": "北五",
+    "vendor_category": "餅乾",
+    "booth_location": "台北吳興街",
+    "booth_name": "台北吳興街",
+    "date": "2025-11-13",
+    "submitted_at": "2025-11-12T10:48:42.822Z",
+    "gps_location": {
+      "latitude": 25.0445824,
+      "longitude": 121.2153856,
+      "accuracy": 15789.348583757988,
+      "timestamp": "2025-11-12T10:48:42.992Z"
+    }
   }
 ]
