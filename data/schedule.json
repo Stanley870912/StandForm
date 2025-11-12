@@ -849,5 +849,20 @@
     "date": "2025-11-15",
     "submitted_at": "2025-11-12T06:32:58.741Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "翊鴻",
+    "vendor_name": "翊鴻",
+    "vendor_category": "餅乾",
+    "booth_location": "台中市水湳",
+    "booth_name": "台中市水湳",
+    "date": "2025-11-13",
+    "submitted_at": "2025-11-12T07:38:57.440Z",
+    "gps_location": {
+      "latitude": 24.1489285,
+      "longitude": 120.7060085,
+      "accuracy": 17.148000717163086,
+      "timestamp": "2025-11-12T07:38:56.442Z"
+    }
   }
 ]
