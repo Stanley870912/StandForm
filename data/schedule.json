@@ -1099,5 +1099,15 @@
       "accuracy": 81.25039672851562,
       "timestamp": "2025-11-12T20:30:48.055Z"
     }
+  },
+  {
+    "vendor_id": "阿證",
+    "vendor_name": "阿證",
+    "vendor_category": "糕餅",
+    "booth_location": "彰化二林",
+    "booth_name": "彰化二林",
+    "date": "2025-11-14",
+    "submitted_at": "2025-11-12T23:25:44.056Z",
+    "gps_location": null
   }
 ]
