@@ -1214,5 +1214,20 @@
       "accuracy": 100,
       "timestamp": "2025-11-13T00:00:19.862Z"
     }
+  },
+  {
+    "vendor_id": "阿邦",
+    "vendor_name": "阿邦",
+    "vendor_category": "糕餅",
+    "booth_location": "嘉義大林",
+    "booth_name": "嘉義大林",
+    "date": "2025-11-14",
+    "submitted_at": "2025-11-13T02:45:28.999Z",
+    "gps_location": {
+      "latitude": 24.0957409,
+      "longitude": 120.5326102,
+      "accuracy": 100,
+      "timestamp": "2025-11-13T02:45:27.825Z"
+    }
   }
 ]

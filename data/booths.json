@@ -286,5 +286,9 @@
   {
     "booth_location": "台中大肚",
     "booth_name": "台中大肚"
+  },
+  {
+    "booth_location": "嘉義大林",
+    "booth_name": "嘉義大林"
   }
 ]
