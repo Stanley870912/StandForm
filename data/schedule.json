@@ -1199,5 +1199,20 @@
     "date": "2025-11-21",
     "submitted_at": "2025-11-12T23:31:08.790Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "阿證",
+    "vendor_name": "阿證",
+    "vendor_category": "糕餅",
+    "booth_location": "彰化二林",
+    "booth_name": "彰化二林",
+    "date": "2025-11-28",
+    "submitted_at": "2025-11-13T00:00:21.267Z",
+    "gps_location": {
+      "latitude": 24.1108799,
+      "longitude": 120.4978594,
+      "accuracy": 100,
+      "timestamp": "2025-11-13T00:00:19.862Z"
+    }
   }
 ]
