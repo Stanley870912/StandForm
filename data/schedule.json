@@ -1254,5 +1254,20 @@
     "date": "2025-11-14",
     "submitted_at": "2025-11-13T07:06:31.342Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "姑姑",
+    "vendor_name": "姑姑",
+    "vendor_category": "糕餅",
+    "booth_location": "雲林虎尾",
+    "booth_name": "雲林虎尾",
+    "date": "2025-11-16",
+    "submitted_at": "2025-11-13T07:08:01.751Z",
+    "gps_location": {
+      "latitude": 24.0628753,
+      "longitude": 120.4352723,
+      "accuracy": 4.199999809265137,
+      "timestamp": "2025-11-13T07:07:59.807Z"
+    }
   }
 ]
