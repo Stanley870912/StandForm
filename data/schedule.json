@@ -1244,5 +1244,15 @@
       "accuracy": 100,
       "timestamp": "2025-11-13T03:10:30.369Z"
     }
+  },
+  {
+    "vendor_id": "姑姑",
+    "vendor_name": "姑姑",
+    "vendor_category": "糕餅",
+    "booth_location": "台中向上",
+    "booth_name": "台中向上",
+    "date": "2025-11-14",
+    "submitted_at": "2025-11-13T07:06:31.342Z",
+    "gps_location": null
   }
 ]
