@@ -1229,5 +1229,20 @@
       "accuracy": 100,
       "timestamp": "2025-11-13T02:45:27.825Z"
     }
+  },
+  {
+    "vendor_id": "阿邦",
+    "vendor_name": "阿邦",
+    "vendor_category": "糕餅",
+    "booth_location": "新竹關東橋",
+    "booth_name": "新竹關東橋",
+    "date": "2025-11-15",
+    "submitted_at": "2025-11-13T03:10:31.415Z",
+    "gps_location": {
+      "latitude": 24.0957362,
+      "longitude": 120.5326207,
+      "accuracy": 100,
+      "timestamp": "2025-11-13T03:10:30.369Z"
+    }
   }
 ]
