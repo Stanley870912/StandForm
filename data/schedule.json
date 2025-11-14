@@ -1269,5 +1269,20 @@
       "accuracy": 4.199999809265137,
       "timestamp": "2025-11-13T07:07:59.807Z"
     }
+  },
+  {
+    "vendor_id": "南三",
+    "vendor_name": "南三",
+    "vendor_category": "糕餅",
+    "booth_location": "高雄旗山",
+    "booth_name": "高雄旗山",
+    "date": "2025-11-14",
+    "submitted_at": "2025-11-14T14:39:34.121Z",
+    "gps_location": {
+      "latitude": 22.9854353,
+      "longitude": 120.2031081,
+      "accuracy": 100,
+      "timestamp": "2025-11-14T14:39:32.667Z"
+    }
   }
 ]
