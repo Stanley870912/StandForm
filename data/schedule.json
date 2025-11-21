@@ -1360,5 +1360,15 @@
     "date": "2025-11-21",
     "submitted_at": "2025-11-20T02:35:26.663Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "南六",
+    "vendor_name": "南六",
+    "vendor_category": "糕餅",
+    "booth_location": "屏東中央市場",
+    "booth_name": "屏東中央市場",
+    "date": "2025-11-22",
+    "submitted_at": "2025-11-21T12:07:42.696Z",
+    "gps_location": null
   }
 ]
