@@ -1410,5 +1410,15 @@
     "date": "2025-11-27",
     "submitted_at": "2025-11-25T05:48:10.811Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "南六",
+    "vendor_name": "南六",
+    "vendor_category": "糕餅",
+    "booth_location": "台南善化市場",
+    "booth_name": "台南善化市場",
+    "date": "2025-11-29",
+    "submitted_at": "2025-11-25T05:48:56.932Z",
+    "gps_location": null
   }
 ]
