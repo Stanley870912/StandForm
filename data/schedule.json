@@ -1390,5 +1390,15 @@
     "date": "2025-11-26",
     "submitted_at": "2025-11-25T05:47:39.715Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "南六",
+    "vendor_name": "南六",
+    "vendor_category": "糕餅",
+    "booth_location": "台南歸仁市場",
+    "booth_name": "台南歸仁市場",
+    "date": "2025-11-25",
+    "submitted_at": "2025-11-25T05:47:51.811Z",
+    "gps_location": null
   }
 ]
