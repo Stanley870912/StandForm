@@ -1456,5 +1456,20 @@
       "accuracy": 2000.5339572793641,
       "timestamp": "2025-11-30T06:21:41.579Z"
     }
+  },
+  {
+    "vendor_id": "南三",
+    "vendor_name": "南三",
+    "vendor_category": "糕餅",
+    "booth_location": "台南永康尚青",
+    "booth_name": "台南永康尚青",
+    "date": "2025-12-05",
+    "submitted_at": "2025-11-30T06:23:51.529Z",
+    "gps_location": {
+      "latitude": 22.9933056,
+      "longitude": 120.1963008,
+      "accuracy": 2000.5339572793641,
+      "timestamp": "2025-11-30T06:23:56.353Z"
+    }
   }
 ]
