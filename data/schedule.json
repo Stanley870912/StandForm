@@ -1441,5 +1441,20 @@
     "date": "2025-11-28",
     "submitted_at": "2025-11-27T08:59:56.636Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "南三",
+    "vendor_name": "南三",
+    "vendor_category": "糕餅",
+    "booth_location": "高雄工協市場",
+    "booth_name": "高雄工協市場",
+    "date": "2025-12-01",
+    "submitted_at": "2025-11-30T06:21:38.052Z",
+    "gps_location": {
+      "latitude": 22.9933056,
+      "longitude": 120.1963008,
+      "accuracy": 2000.5339572793641,
+      "timestamp": "2025-11-30T06:21:41.579Z"
+    }
   }
 ]
