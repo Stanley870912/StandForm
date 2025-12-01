@@ -1471,5 +1471,15 @@
       "accuracy": 2000.5339572793641,
       "timestamp": "2025-11-30T06:23:56.353Z"
     }
+  },
+  {
+    "vendor_id": "南六",
+    "vendor_name": "南六",
+    "vendor_category": "糕餅",
+    "booth_location": "高雄寶珠溝市場",
+    "booth_name": "高雄寶珠溝市場",
+    "date": "2025-12-02",
+    "submitted_at": "2025-12-01T13:32:29.229Z",
+    "gps_location": null
   }
 ]
