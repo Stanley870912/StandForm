@@ -1501,5 +1501,15 @@
     "date": "2025-12-06",
     "submitted_at": "2025-12-02T17:52:27.073Z",
     "gps_location": null
+  },
+  {
+    "vendor_id": "南六",
+    "vendor_name": "南六",
+    "vendor_category": "糕餅",
+    "booth_location": "高雄陽明市場",
+    "booth_name": "高雄陽明市場",
+    "date": "2025-12-04",
+    "submitted_at": "2025-12-02T17:53:04.425Z",
+    "gps_location": null
   }
 ]
